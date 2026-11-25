@@ -12,10 +12,9 @@ sys.path.insert(0, str(Path(__file__).parent))
 from conteudo import POSTS, RESERVA, HASHTAGS_BASE
 from render import post_dir, ROOT
 
-MESES = {"novembro": ("Novembro", 11), "dezembro": ("Dezembro", 12)}
+MESES = {"novembro-dezembro": ("Novembro e Dezembro", 12)}
 INTRO = {
-    "novembro": "Fase 0 da inauguração: cinco posts de 26 a 30 de novembro para a Net do Bem existir no Instagram e no Facebook. Um CTA só na semana inteira: siga e compartilhe.",
-    "dezembro": "Fase 1, quem somos, e Fase 2, quem cuida. Onze posts para explicar a fundação em 10 segundos e abrir o nosso território: quem cuida de quem cuida.",
+    "novembro-dezembro": "Do fim de novembro ao fim de dezembro: a inauguração em 26/11 (Fase 0), quem somos (Fase 1) e quem cuida (Fase 2). Dezesseis posts para a Net do Bem existir, se explicar em 10 segundos e abrir o nosso território: quem cuida de quem cuida.",
 }
 e = html.escape
 WA = "https://api.whatsapp.com/send?text="
@@ -169,8 +168,9 @@ def post_html(p, nome_mes):
   <div class="leg" data-r="ig">{e(ig)}</div><div class="leg" data-r="fb" hidden>{e(p['legenda_fb'])}</div>
   <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="{wa(ok_msg)}">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
   <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="{e(pre)}">Enviar ajuste no WhatsApp</button></div></div>
+  <p class="sec-p" style="margin:12px 0 0;font-size:13px">Aprovação: Barros (gestor) · Patrícia e Agda (validadoras)</p>
   <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">{e(p['alt'])}</p>
-   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · aprovado por Barros, Patrícia e Agda.</p></details>
  </div>
 </article>"""
 
@@ -198,7 +198,7 @@ def month_page(mes):
         "".join(f'<button data-g="fase" data-v="{f}">Fase {f}</button>' for f in fases) + \
         '<button class="on" data-g="status" data-v="*">Todos</button><button data-g="status" data-v="pronto">Prontos</button><button data-g="status" data-v="pendencia">Com pendência</button></div>'
     reserva = ""
-    if mes == "dezembro":
+    if mes == "novembro-dezembro":
         reserva = '<section><h2 class="sec-t">Posts de reserva</h2><div class="box res"><ul>' + "".join(
             f'<li><b>{e(r["titulo"])}</b> ({e(r["fase"])}). {e(r["quando"])}. {e(r["motivo"])}</li>' for r in RESERVA) + "</ul></div></section>"
     aprov = wa(f"Olá! Revisei o calendário de {nome} da Fundação Net do Bem ({len(ps)} posts) e está APROVADO.")
@@ -213,8 +213,8 @@ def month_page(mes):
 <div class="badges"><span class="badge">{len(ps)} posts</span><span class="badge">{prontos} prontos</span><span class="badge">{len(ps)-prontos} com pendência</span><span class="badge">Instagram + Facebook</span></div></div></header>
 <nav class="nav"><a href="../index.html">← Todos os meses</a><a href="#calendario">Calendário</a><a href="#posts">Posts ({len(ps)})</a><a class="wa" target="_blank" href="{aprov}">Aprovar mês no WhatsApp</a></nav>
 <main class="wrap">
-<section id="calendario"><h2 class="sec-t">Calendário sugerido</h2><p class="sec-p">Terça e quinta às 18h, sábado às 11h. Datas da Fase 0 seguem o Briefing V2.</p>
-<div class="box"><b>Aprovação do calendário</b><div class="row"><a class="btn b-ok" target="_blank" href="{aprov}">Aprovar calendário completo</a><a class="btn b-adj" target="_blank" href="{ajuste}">Sugerir mudança de data</a></div></div>
+<section id="calendario"><h2 class="sec-t">Calendário sugerido</h2><p class="sec-p">Fase 0: um post por dia de 26 a 30/11. Dezembro: terça e quinta às 18h, sábado às 11h. Recesso de 23 a 28/12.</p>
+<div class="box"><b>Aprovação do calendário</b><p class="sec-p" style="margin:4px 0 0">Quem aprova: Barros (gestor), Patrícia Galheigo e Agda Ximenes (validadoras). Cada post vai ao ar com o ok dos três.</p><div class="row"><a class="btn b-ok" target="_blank" href="{aprov}">Aprovar calendário completo</a><a class="btn b-adj" target="_blank" href="{ajuste}">Sugerir mudança de data</a></div></div>
 {cal}</section>
 <section id="posts"><h2 class="sec-t">Posts para revisão</h2><p class="sec-p">Arraste as imagens, copie a legenda de cada rede e aprove ou peça ajuste. Post com pendência só vai ao ar depois que ela for resolvida.</p>
 {filt}{posts}</section>{reserva}

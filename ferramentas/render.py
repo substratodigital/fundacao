@@ -104,6 +104,11 @@ body{{font-family:Montserrat,sans-serif;color:{C['tinta']};-webkit-font-smoothin
 .reels .tt{{position:absolute;left:92px;right:92px;top:1180px;text-align:center}}
 .reels .t{{font-size:104px;color:#fff}}
 .reels .sub{{margin-top:30px;font-size:40px;color:rgba(255,255,255,.85)}}
+.ilustra{{padding:0;background:#F4EADC}}
+.ilustra .bg{{position:absolute;inset:0;background-repeat:no-repeat;background-position:center bottom}}
+.ilustra .tx{{position:absolute;left:92px;right:92px;top:190px}}
+.ilustra .kicker{{margin-bottom:30px}}
+.ilustra .t{{color:#2F6F4C;max-width:880px}}
 .tag{{position:absolute;top:150px;left:50%;transform:translateX(-50%);background:{C['coral']};color:#fff;font-weight:600;font-size:30px;letter-spacing:.12em;padding:14px 30px;border-radius:999px;text-transform:uppercase}}
 """
 
@@ -124,6 +129,13 @@ def heart(theme, size=820, right=-220, bottom=-200):
 
 def slide_html(s, i, n):
     t = s["tipo"]
+    if t == "capa" and s.get("img"):
+        top, foot = chrome("creme", i, n)
+        fs = 112 if len(s["titulo"]) <= 22 else 92
+        im = Image.open(TOOLS / "massinha" / s["img"]).convert("RGB")
+        bgc = "rgb(%d,%d,%d)" % im.getpixel((10, 10))
+        size = f'{s["escala"]}% auto' if s.get("escala") else "cover"
+        return "ilustra", f'<div class="bg" style="background-color:{bgc};background-size:{size};background-image:url({u("massinha/" + s["img"])})"></div>' + top + f'<div class="tx"><div class="kicker">{esc(s.get("kicker",""))}</div><div class="h t" style="font-size:{fs}px">{esc(s["titulo"])}</div></div>'
     if t == "capa":
         top, foot = chrome("creme", i, n)
         sub = f'<div class="sub">{esc(s.get("sub"))}</div>' if s.get("sub") else ""
@@ -205,7 +217,7 @@ def ficha(p):
           "- [x] 1 ideia central", "- [x] 1 CTA", "- [x] Gancho com até 6 palavras no slide 1 (card de frase-mãe é exceção prevista no briefing)",
           "- [x] Sem criança identificável", "- [x] Sem endereço, rotina ou detalhe de segurança",
           "- [x] Sem cópia de perfil de referência", "- [x] Sem conteúdo de Imposto de Renda",
-          "- [ ] Foto ou vídeo com consentimento de adulto (se houver rosto)", "- [ ] Legenda revisada por 1 pessoa da fundação", ""]
+          "- [ ] Foto ou vídeo com consentimento de adulto (se houver rosto)", "", "## Aprovação", "- [ ] Barros (gestor)", "- [ ] Patrícia Galheigo (validadora)", "- [ ] Agda Ximenes (validadora)", ""]
     return "\n".join(L)
 
 

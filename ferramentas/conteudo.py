@@ -19,7 +19,7 @@ HASHTAGS_BASE = "#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida"
 POSTS = [
     # ════════════════════════════ NOVEMBRO · FASE 0 · INAUGURAÇÃO ════════════════════════════
     {
-        "id": "01", "mes": "novembro", "data_ordem": "2026-11-26", "data": "26/11", "dia_semana": "Quinta-feira",
+        "id": "01", "mes": "novembro-dezembro", "data_ordem": "2026-11-26", "data": "26/11", "dia_semana": "Quinta-feira",
         "horario": "17h, antes do evento",
         "fase": 0, "fase_nome": "Fase 0 · Inauguração", "pauta": "P0.1 · Inauguramos hoje",
         "formato": "Arte limpa (versão com foto opcional)", "formato_slug": "foto-faixa",
@@ -29,24 +29,25 @@ POSTS = [
         "cta": "Siga e compartilhe",
         "status": "pronto",
         "pendencias": [
+            "Sugestão do plano de crescimento: publicar em collab com o perfil pessoal do André (e de parceiros de Sorocaba, se houver), pedir para seguir o perfil na fala de abertura e deixar o QR code do Instagram (gerado no próprio app) visível no evento.",
             "Opcional: se a equipe tirar uma foto antes das 17h, trocar a arte pela versão com foto e faixa verde (slide 2 desta peça mostra o layout).",
         ],
         "prova": "Sem foto real no momento: arte limpa, como pede o briefing.",
         "slides": [
-            {"tipo": "logo", "titulo": "Hoje é dia de inaugurar", "sub": "26 . 11 . 2026  ·  Sorocaba"},
+            {"tipo": "capa", "img": "inauguracao-b.jpg", "kicker": "26 . 11 . 2026  ·  Sorocaba", "titulo": "Hoje é dia de inaugurar"},
             {"tipo": "foto", "img": None, "faixa": "Hoje é dia de inaugurar",
              "placeholder": "Versão opcional: foto da equipe (só adultos) antes do evento"},
         ],
         "legenda_ig": (
             "Hoje é dia de inaugurar.\n\n"
-            "A Fundação Net do Bem é inaugurada hoje, em Sorocaba, num encontro com convidados. Nosso trabalho é apoiar as casas de acolhimento "
+            "Um ano depois de nascer, a Fundação Net do Bem é inaugurada hoje, em Sorocaba, num encontro com convidados. Nosso trabalho é apoiar as casas de acolhimento "
             "e as pessoas que cuidam nelas: educadores, equipes técnicas, gestores e voluntários. "
             "A partir de agora, você acompanha esse trabalho por aqui.\n\n"
             "Siga e compartilhe."
         ),
         "legenda_fb": (
             "Hoje é dia de inaugurar.\n\n"
-            "A Fundação Net do Bem é inaugurada hoje, em Sorocaba, num encontro com convidados. Nosso trabalho é apoiar as casas de acolhimento "
+            "Um ano depois de nascer, a Fundação Net do Bem é inaugurada hoje, em Sorocaba, num encontro com convidados. Nosso trabalho é apoiar as casas de acolhimento "
             "de crianças e adolescentes e as pessoas que cuidam nelas: educadores, equipes técnicas, gestores e voluntários.\n\n"
             "Esta página vai mostrar esse trabalho de perto, sem expor nenhuma criança.\n\n"
             "Siga a página e compartilhe."
@@ -60,7 +61,7 @@ POSTS = [
         ],
     },
     {
-        "id": "02", "mes": "novembro", "data_ordem": "2026-11-27", "data": "27/11", "dia_semana": "Sexta-feira",
+        "id": "02", "mes": "novembro-dezembro", "data_ordem": "2026-11-27", "data": "27/11", "dia_semana": "Sexta-feira",
         "horario": "18h",
         "fase": 0, "fase_nome": "Fase 0 · Inauguração", "pauta": "P0.2 · Frase-mãe",
         "formato": "Card de posicionamento", "formato_slug": "card",
@@ -90,7 +91,7 @@ POSTS = [
         "alt": "Card verde profundo com a frase em branco: Fortalecer quem cuida também é proteger a infância. Logo pequeno da Fundação Net do Bem abaixo.",
     },
     {
-        "id": "03", "mes": "novembro", "data_ordem": "2026-11-28", "data": "28/11", "dia_semana": "Sábado",
+        "id": "03", "mes": "novembro-dezembro", "data_ordem": "2026-11-28", "data": "28/11", "dia_semana": "Sábado",
         "horario": "11h",
         "fase": 0, "fase_nome": "Fase 0 · Inauguração", "pauta": "P0.3 · Bastidor",
         "formato": "Carrossel de fotos reais com faixa", "formato_slug": "foto-faixa",
@@ -103,9 +104,10 @@ POSTS = [
             "Fotos do evento: equipe montando, convidados adultos, fala da Patrícia e da Agda. Nenhuma criança, nenhuma placa ou fachada do local.",
             "Confirmar autorização de imagem dos adultos que aparecem de rosto.",
         ],
-        "prova": "Foto real do evento (banner já disponível; demais fotos chegam depois de 26/11).",
+        "prova": "Capa em massinha; fotos reais do evento entram nos slides 2 a 5.",
         "slides": [
-            {"tipo": "foto", "img": None, "faixa": "Os bastidores da inauguração", "placeholder": "Foto da equipe preparando o espaço"},
+            {"tipo": "capa", "img": "bastidores-a.jpg", "kicker": "Antes da quinta-feira", "titulo": "Os bastidores da inauguração"},
+            {"tipo": "foto", "img": None, "faixa": "Preparando o espaço", "placeholder": "Foto da equipe preparando o espaço"},
             {"tipo": "foto", "img": "banner-verde.jpg", "faixa": "O banner que recebeu os convidados", "fit": "contain"},
             {"tipo": "foto", "img": None, "faixa": "Quem esteve com a gente", "placeholder": "Foto de convidados adultos, com autorização"},
             {"tipo": "foto", "img": None, "faixa": "A apresentação da fundação", "placeholder": "Foto da Patrícia ou da Agda falando"},
@@ -127,7 +129,7 @@ POSTS = [
                "a equipe e convidados adultos. Não aparecem crianças.",
     },
     {
-        "id": "04", "mes": "novembro", "data_ordem": "2026-11-29", "data": "29/11", "dia_semana": "Domingo",
+        "id": "04", "mes": "novembro-dezembro", "data_ordem": "2026-11-29", "data": "29/11", "dia_semana": "Domingo",
         "horario": "18h",
         "fase": 0, "fase_nome": "Fase 0 · Inauguração", "pauta": "P0.4 · Quem está por trás",
         "formato": "Carrossel de retratos + Reels do fundador", "formato_slug": "carrossel",
@@ -142,7 +144,7 @@ POSTS = [
         ],
         "prova": "Retratos oficiais em massinha do site e trajetória confirmada nos textos da inauguração.",
         "slides": [
-            {"tipo": "capa", "kicker": "Quem está por trás", "titulo": "Quem faz a Net do Bem", "sub": "Três pessoas, três trajetórias"},
+            {"tipo": "capa", "img": "trio-b.jpg", "kicker": "Quem está por trás", "titulo": "Quem faz a Net do Bem", "sub": "Três pessoas, três trajetórias"},
             {"tipo": "retrato", "img": "founder-net-do-bem.webp", "nome": "André Facciolli", "papel": "Fundador",
              "corpo": "Empresário há mais de 30 anos na tecnologia. Criou a fundação para colocar gestão e rede a serviço da infância."},
             {"tipo": "retrato", "img": "patricia-operacoes-netdobem.webp", "nome": "Patrícia Galheigo", "papel": "Diretora administrativa",
@@ -174,7 +176,7 @@ POSTS = [
                "Patrícia Galheigo, diretora administrativa; e Agda Ximenes, do assessoramento técnico. Cada slide traz nome, função e uma frase sobre a trajetória.",
     },
     {
-        "id": "05", "mes": "novembro", "data_ordem": "2026-11-30", "data": "30/11", "dia_semana": "Segunda-feira",
+        "id": "05", "mes": "novembro-dezembro", "data_ordem": "2026-11-30", "data": "30/11", "dia_semana": "Segunda-feira",
         "horario": "18h",
         "fase": 0, "fase_nome": "Fase 0 · Inauguração", "pauta": "P0.5 · Obrigado",
         "formato": "Arte limpa (versão com foto opcional)", "formato_slug": "foto-faixa",
@@ -188,7 +190,7 @@ POSTS = [
         ],
         "prova": "Arte limpa; foto da equipe se disponível.",
         "slides": [
-            {"tipo": "obrigado", "titulo": "Obrigado por estar aqui", "sub": "Em dezembro, a gente explica o nosso trabalho post a post."},
+            {"tipo": "capa", "img": "maos-coracao-a.jpg", "kicker": "Depois da inauguração", "titulo": "Obrigado por estar aqui"},
             {"tipo": "foto", "img": None, "faixa": "Obrigado por estar aqui", "placeholder": "Versão opcional: foto da equipe na inauguração"},
         ],
         "legenda_ig": (
@@ -208,7 +210,7 @@ POSTS = [
 
     # ════════════════════════════ DEZEMBRO · FASE 1 · QUEM SOMOS ════════════════════════════
     {
-        "id": "06", "mes": "dezembro", "data_ordem": "2026-12-01", "data": "01/12", "dia_semana": "Terça-feira",
+        "id": "06", "mes": "novembro-dezembro", "data_ordem": "2026-12-01", "data": "01/12", "dia_semana": "Terça-feira",
         "horario": "18h",
         "fase": 1, "fase_nome": "Fase 1 · Quem somos", "pauta": "Pauta-mãe 1 · Quem somos",
         "formato": "Carrossel educativo", "formato_slug": "carrossel",
@@ -220,7 +222,7 @@ POSTS = [
         "pendencias": [],
         "prova": "Frentes de atuação publicadas no site netdobem.org.br e pesquisa aberta no portal.",
         "slides": [
-            {"tipo": "capa", "kicker": "Para fixar no perfil", "titulo": "A Net do Bem em 5 slides"},
+            {"tipo": "capa", "img": "equipe-a.jpg", "kicker": "Para fixar no perfil", "titulo": "A Net do Bem em 5 slides"},
             {"tipo": "texto", "num": "1", "titulo": "Somos uma fundação de Sorocaba.", "corpo": "Apoiamos casas de acolhimento de crianças e adolescentes."},
             {"tipo": "texto", "num": "2", "titulo": "Cuidamos de quem cuida.", "corpo": "Educadores, técnicos, gestores e voluntários seguram o dia a dia de uma casa. O nosso foco está neles."},
             {"tipo": "lista", "num": "3", "titulo": "Quatro frentes de trabalho", "itens": ["Pesquisa e conhecimento", "Capacitação e gestão", "Aceleração de organizações", "Articulação com parceiros"]},
@@ -243,7 +245,7 @@ POSTS = [
                "(pesquisa, capacitação, aceleração e articulação); começamos ouvindo; e o convite para salvar e compartilhar.",
     },
     {
-        "id": "07", "mes": "dezembro", "data_ordem": "2026-12-03", "data": "03/12", "dia_semana": "Quinta-feira",
+        "id": "07", "mes": "novembro-dezembro", "data_ordem": "2026-12-03", "data": "03/12", "dia_semana": "Quinta-feira",
         "horario": "18h",
         "fase": 1, "fase_nome": "Fase 1 · Quem somos", "pauta": "Pauta-mãe 2 · O que não fazemos",
         "formato": "Carrossel educativo", "formato_slug": "carrossel",
@@ -255,7 +257,7 @@ POSTS = [
         "pendencias": [],
         "prova": "Posicionamento do Briefing V2 e fala da Agda na inauguração.",
         "slides": [
-            {"tipo": "capa", "kicker": "Para entender o nosso papel", "titulo": "O que não fazemos"},
+            {"tipo": "capa", "img": "escuta-a.jpg", "kicker": "Para entender o nosso papel", "titulo": "O que não fazemos"},
             {"tipo": "texto", "num": "1", "titulo": "Não acolhemos crianças.", "corpo": "Apoiamos as casas de acolhimento que fazem esse trabalho."},
             {"tipo": "texto", "num": "2", "titulo": "Não trabalhamos com adoção.", "corpo": "Adoção tem caminho próprio, pela Justiça da Infância e da Juventude."},
             {"tipo": "texto", "num": "3", "titulo": "Não chegamos para fiscalizar.", "corpo": "Chegamos para ouvir cada casa e construir o apoio junto com a equipe."},
@@ -278,7 +280,7 @@ POSTS = [
                "formação, apoio de gestão, pesquisa e conexão com parceiros.",
     },
     {
-        "id": "08", "mes": "dezembro", "data_ordem": "2026-12-05", "data": "05/12", "dia_semana": "Sábado",
+        "id": "08", "mes": "novembro-dezembro", "data_ordem": "2026-12-05", "data": "05/12", "dia_semana": "Sábado",
         "horario": "11h",
         "fase": 1, "fase_nome": "Fase 1 · Quem somos", "pauta": "Fase 1 · Por que Sorocaba?",
         "formato": "Carrossel educativo", "formato_slug": "carrossel",
@@ -293,15 +295,15 @@ POSTS = [
         ],
         "prova": "Sede registrada em Sorocaba e portal da pesquisa no ar.",
         "slides": [
-            {"tipo": "capa", "kicker": "Raiz local", "titulo": "Por que Sorocaba?"},
-            {"tipo": "texto", "num": "1", "titulo": "Foi aqui que a fundação nasceu.", "corpo": "A Net do Bem foi criada em Sorocaba em 2026. [Motivo pessoal do André a confirmar]"},
+            {"tipo": "capa", "img": "rede-casas-b.jpg", "kicker": "Raiz local", "titulo": "Por que Sorocaba?"},
+            {"tipo": "texto", "num": "1", "titulo": "Foi aqui que a fundação nasceu.", "corpo": "A Net do Bem nasceu em Sorocaba em 26 de novembro de 2025. [Motivo pessoal do André a confirmar]"},
             {"tipo": "texto", "num": "2", "titulo": "Perto das casas.", "corpo": "Estar na mesma cidade permite visitar, ouvir e acompanhar cada organização de perto."},
             {"tipo": "texto", "num": "3", "titulo": "A escuta vai além.", "corpo": "O mapeamento no portal recebe casas de acolhimento de todo o Brasil."},
             {"tipo": "cta", "texto": "Salva e compartilha", "apoio": "Marca quem é de Sorocaba e trabalha com acolhimento."},
         ],
         "legenda_ig": (
             "Por que Sorocaba?\n\n"
-            "A Net do Bem nasceu aqui, e começar perto das casas de acolhimento permite visitar, ouvir e acompanhar cada uma. "
+            "A Net do Bem nasceu aqui em novembro de 2025, e começar perto das casas de acolhimento permite visitar, ouvir e acompanhar cada uma. "
             "[Frase do André sobre a escolha da cidade, a confirmar]\n\n"
             "Salva e compartilha."
         ),
@@ -314,7 +316,7 @@ POSTS = [
         "alt": "Carrossel em fundo creme sobre a escolha de Sorocaba: a fundação nasceu na cidade, trabalha perto das casas e recebe casas de todo o Brasil no mapeamento.",
     },
     {
-        "id": "09", "mes": "dezembro", "data_ordem": "2026-12-08", "data": "08/12", "dia_semana": "Terça-feira",
+        "id": "09", "mes": "novembro-dezembro", "data_ordem": "2026-12-08", "data": "08/12", "dia_semana": "Terça-feira",
         "horario": "18h",
         "fase": 1, "fase_nome": "Fase 1 · Quem somos", "pauta": "Fase 1 · Reels do fundador",
         "formato": "Reels 30 a 45 s + capa", "formato_slug": "reels",
@@ -324,6 +326,7 @@ POSTS = [
         "cta": "Salva e compartilha",
         "status": "pendencia",
         "pendencias": [
+            "Reels de 30 a 60 s; publicar em collab com o perfil pessoal do André.",
             "Gravar o André olhando para a câmera, fundo real, sem estúdio, até 04/12.",
             "Se o Reels já tiver sido publicado em 29/11, trocar esta data pelo carrossel de retratos.",
         ],
@@ -351,7 +354,7 @@ POSTS = [
         "alt": "Capa de Reels com retrato em massinha do André Facciolli e o título Por que criei a Net do Bem.",
     },
     {
-        "id": "10", "mes": "dezembro", "data_ordem": "2026-12-10", "data": "10/12", "dia_semana": "Quinta-feira",
+        "id": "10", "mes": "novembro-dezembro", "data_ordem": "2026-12-10", "data": "10/12", "dia_semana": "Quinta-feira",
         "horario": "18h",
         "fase": 1, "fase_nome": "Fase 1 · Quem somos", "pauta": "Pauta-mãe 9 · Perguntas que mais recebemos",
         "formato": "Carrossel educativo", "formato_slug": "carrossel",
@@ -366,7 +369,7 @@ POSTS = [
         ],
         "prova": "Perguntas reais registradas pela equipe.",
         "slides": [
-            {"tipo": "capa", "kicker": "Respostas curtas", "titulo": "3 perguntas da inauguração"},
+            {"tipo": "capa", "img": "perguntas-a.jpg", "kicker": "Respostas curtas", "titulo": "3 perguntas da inauguração"},
             {"tipo": "pergunta", "num": "1", "pergunta": "Vocês acolhem crianças?", "resposta": "Não. Apoiamos as casas de acolhimento e as equipes que trabalham nelas."},
             {"tipo": "pergunta", "num": "2", "pergunta": "Como uma casa participa?", "resposta": "O primeiro passo é responder ao mapeamento em portal.netdobem.org.br."},
             {"tipo": "pergunta", "num": "3", "pergunta": "Como eu posso ajudar?", "resposta": "[Resposta oficial a confirmar com a diretoria]"},
@@ -387,7 +390,7 @@ POSTS = [
         "alt": "Carrossel de perguntas e respostas em fundo creme: vocês acolhem crianças; como uma casa participa; como eu posso ajudar.",
     },
     {
-        "id": "11", "mes": "dezembro", "data_ordem": "2026-12-12", "data": "12/12", "dia_semana": "Sábado",
+        "id": "11", "mes": "novembro-dezembro", "data_ordem": "2026-12-12", "data": "12/12", "dia_semana": "Sábado",
         "horario": "11h",
         "fase": 1, "fase_nome": "Fase 1 · Quem somos", "pauta": "Card de posicionamento da semana",
         "formato": "Card de posicionamento", "formato_slug": "card",
@@ -418,80 +421,80 @@ POSTS = [
 
     # ════════════════════════════ DEZEMBRO · FASE 2 · QUEM CUIDA ════════════════════════════
     {
-        "id": "12", "mes": "dezembro", "data_ordem": "2026-12-15", "data": "15/12", "dia_semana": "Terça-feira",
+        "id": "12", "mes": "novembro-dezembro", "data_ordem": "2026-12-15", "data": "15/12", "dia_semana": "Terça-feira",
         "horario": "18h",
         "fase": 2, "fase_nome": "Fase 2 · Quem cuida", "pauta": "Pauta-mãe 3 · Quem cuida de quem cuida",
         "formato": "Carrossel educativo", "formato_slug": "carrossel",
         "titulo": "Quem cuida de quem cuida?",
         "objetivo": "Abrir o território próprio da marca.",
         "publico": "Equipes de acolhimento e sociedade",
-        "cta": "Comenta: quero ajudar",
+        "cta": "Compartilha com quem cuida de alguém",
         "status": "pronto",
         "pendencias": [],
         "prova": "Funcionamento contínuo do serviço de acolhimento institucional (Tipificação Nacional dos Serviços Socioassistenciais).",
         "slides": [
-            {"tipo": "capa", "kicker": "O nosso território", "titulo": "Quem cuida de quem cuida?"},
+            {"tipo": "capa", "img": "equipe-b.jpg", "kicker": "O nosso território", "titulo": "Quem cuida de quem cuida?"},
             {"tipo": "texto", "num": "1", "titulo": "Uma casa não fecha.", "corpo": "O acolhimento funciona 24 horas por dia, todos os dias. Sempre tem alguém de plantão."},
             {"tipo": "texto", "num": "2", "titulo": "Essa equipe também precisa de apoio.", "corpo": "Formação, supervisão, troca com outras casas e uma gestão que funcione."},
             {"tipo": "texto", "num": "3", "titulo": "A Net do Bem existe para isso.", "corpo": "Levar formação, apoio de gestão e parceiros para quem está na ponta."},
-            {"tipo": "cta", "texto": "Comenta: quero ajudar", "apoio": "A gente responde cada comentário."},
+            {"tipo": "cta", "texto": "Compartilha com quem cuida de alguém", "apoio": "Manda por direct para quem trabalha numa casa de acolhimento."},
         ],
         "legenda_ig": (
             "Quem cuida de quem cuida?\n\n"
             "Uma casa de acolhimento funciona 24 horas por dia, e sempre tem um educador, uma técnica ou uma coordenadora de plantão. "
             "Essas pessoas também precisam de formação, supervisão e uma gestão que funcione. A Net do Bem existe para levar esse apoio.\n\n"
-            "Comenta: quero ajudar."
+            "Compartilha com quem cuida de alguém."
         ),
         "legenda_fb": (
             "Quem cuida de quem cuida?\n\n"
             "Uma casa de acolhimento funciona 24 horas por dia, e sempre tem um educador, uma técnica ou uma coordenadora de plantão. "
             "Essas pessoas também precisam de formação, supervisão e uma gestão que funcione. A Fundação Net do Bem existe para levar esse apoio.\n\n"
-            "Comente: quero ajudar."
+            "Compartilhe com quem cuida de alguém."
         ),
-        "alt": "Carrossel em fundo creme: uma casa não fecha; essa equipe também precisa de apoio; a Net do Bem existe para isso; comenta quero ajudar.",
+        "alt": "Carrossel em fundo creme: uma casa não fecha; essa equipe também precisa de apoio; a Net do Bem existe para isso; compartilha com quem cuida de alguém.",
     },
     {
-        "id": "13", "mes": "dezembro", "data_ordem": "2026-12-17", "data": "17/12", "dia_semana": "Quinta-feira",
+        "id": "13", "mes": "novembro-dezembro", "data_ordem": "2026-12-17", "data": "17/12", "dia_semana": "Quinta-feira",
         "horario": "18h",
         "fase": 2, "fase_nome": "Fase 2 · Quem cuida", "pauta": "Pauta-mãe 4 · 3 coisas que uma casa precisa",
         "formato": "Carrossel lista", "formato_slug": "carrossel",
         "titulo": "3 necessidades que ninguém vê",
         "objetivo": "Mostrar o trabalho invisível que sustenta o cuidado.",
         "publico": "Empresas e sociedade",
-        "cta": "Comenta: quero ajudar",
+        "cta": "Marca uma empresa que poderia ajudar",
         "status": "pronto",
         "pendencias": [],
         "prova": "Frentes de atuação da fundação e falas da equipe técnica na inauguração.",
         "slides": [
-            {"tipo": "capa", "kicker": "Lista rápida", "titulo": "3 necessidades que ninguém vê"},
+            {"tipo": "capa", "img": "planejamento-b.jpg", "escala": 84, "kicker": "Lista rápida", "titulo": "3 necessidades que ninguém vê"},
             {"tipo": "texto", "num": "1", "titulo": "Gestão e planejamento", "corpo": "Orçamento, prestação de contas e editais. Sem isso, o cuidado fica sem continuidade."},
             {"tipo": "texto", "num": "2", "titulo": "Formação da equipe", "corpo": "Quem cuida lida com histórias difíceis todos os dias. Formação e supervisão ajudam na rotina."},
             {"tipo": "texto", "num": "3", "titulo": "Rede de apoio", "corpo": "Escola, saúde, conselhos, empresas e voluntários. Uma casa não dá conta sozinha."},
-            {"tipo": "cta", "texto": "Comenta: quero ajudar", "apoio": "Conta qual dessas três você consegue apoiar."},
+            {"tipo": "cta", "texto": "Marca uma empresa que poderia ajudar", "apoio": "Gestão, formação e rede também se apoiam."},
         ],
         "legenda_ig": (
             "3 necessidades que ninguém vê.\n\n"
             "Quando se fala de casa de acolhimento, quase sempre a conversa é sobre doação de itens. "
             "O dia a dia também depende de gestão, de uma equipe com formação e de uma rede de apoio por perto.\n\n"
-            "Comenta: quero ajudar."
+            "Marca uma empresa que poderia ajudar."
         ),
         "legenda_fb": (
             "3 necessidades que ninguém vê numa casa de acolhimento.\n\n"
             "Quando se fala de casa de acolhimento, quase sempre a conversa é sobre doação de itens. "
             "O dia a dia também depende de gestão, de uma equipe com formação e de uma rede de apoio por perto.\n\n"
-            "Comente: quero ajudar."
+            "Marque uma empresa que poderia ajudar."
         ),
         "alt": "Carrossel em fundo creme com três itens numerados: gestão e planejamento, formação da equipe e rede de apoio.",
     },
     {
-        "id": "14", "mes": "dezembro", "data_ordem": "2026-12-19", "data": "19/12", "dia_semana": "Sábado",
+        "id": "14", "mes": "novembro-dezembro", "data_ordem": "2026-12-19", "data": "19/12", "dia_semana": "Sábado",
         "horario": "11h",
         "fase": 2, "fase_nome": "Fase 2 · Quem cuida", "pauta": "Card de posicionamento da semana",
         "formato": "Card de posicionamento", "formato_slug": "card",
         "titulo": "Por trás de cada casa, tem gente",
         "objetivo": "Fixar o território quem cuida.",
         "publico": "Todos os públicos",
-        "cta": "Comenta: quero ajudar",
+        "cta": "Compartilha com quem cuida de alguém",
         "status": "pronto",
         "pendencias": [],
         "prova": "Frase do Briefing V2.",
@@ -502,18 +505,18 @@ POSTS = [
             "Por trás de cada casa, tem gente que precisa de apoio também.\n\n"
             "Educadores, cozinheiras, psicólogas, assistentes sociais e coordenadores fazem o acolhimento acontecer. "
             "É para essas pessoas que a Net do Bem trabalha.\n\n"
-            "Comenta: quero ajudar."
+            "Compartilha com quem cuida de alguém."
         ),
         "legenda_fb": (
             "Por trás de cada casa, tem gente que precisa de apoio também.\n\n"
             "Educadores, cozinheiras, psicólogas, assistentes sociais e coordenadores fazem o acolhimento acontecer. "
             "É para essas pessoas que a Fundação Net do Bem trabalha.\n\n"
-            "Comente: quero ajudar."
+            "Compartilhe com quem cuida de alguém."
         ),
         "alt": "Card verde profundo com a frase em branco: Por trás de cada casa, tem gente que precisa de apoio também.",
     },
     {
-        "id": "15", "mes": "dezembro", "data_ordem": "2026-12-22", "data": "22/12", "dia_semana": "Terça-feira",
+        "id": "15", "mes": "novembro-dezembro", "data_ordem": "2026-12-22", "data": "22/12", "dia_semana": "Terça-feira",
         "horario": "18h",
         "fase": 2, "fase_nome": "Fase 2 · Quem cuida", "pauta": "Fase 2 · Cuidar sem se anular",
         "formato": "Carrossel educativo", "formato_slug": "carrossel",
@@ -527,7 +530,7 @@ POSTS = [
         ],
         "prova": "Conteúdo educativo com revisão de profissional habilitada.",
         "slides": [
-            {"tipo": "capa", "kicker": "Para quem cuida", "titulo": "Dá para cuidar sem se anular?"},
+            {"tipo": "capa", "img": "pausa-a.jpg", "kicker": "Para quem cuida", "titulo": "Dá para cuidar sem se anular?"},
             {"tipo": "texto", "num": "1", "titulo": "Cansaço também é sinal.", "corpo": "Quem cuida de outras pessoas o dia todo costuma deixar o próprio cansaço para depois."},
             {"tipo": "texto", "num": "2", "titulo": "Pausa faz parte do trabalho.", "corpo": "Escala organizada, folga respeitada e espaço para falar do que pesa."},
             {"tipo": "texto", "num": "3", "titulo": "Ninguém cuida bem sozinho.", "corpo": "Supervisão e conversa com colegas ajudam a dividir as situações difíceis."},
@@ -548,7 +551,7 @@ POSTS = [
         "alt": "Carrossel em fundo creme: cansaço também é sinal; pausa faz parte do trabalho; ninguém cuida bem sozinho.",
     },
     {
-        "id": "16", "mes": "dezembro", "data_ordem": "2026-12-29", "data": "29/12", "dia_semana": "Terça-feira",
+        "id": "16", "mes": "novembro-dezembro", "data_ordem": "2026-12-29", "data": "29/12", "dia_semana": "Terça-feira",
         "horario": "18h",
         "fase": 2, "fase_nome": "Fase 2 · Quem cuida", "pauta": "Pauta-mãe 8 · Depoimento de cuidador",
         "formato": "Foto real com faixa ou Reels", "formato_slug": "foto-faixa",

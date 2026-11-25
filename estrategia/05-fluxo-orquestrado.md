@@ -14,7 +14,7 @@ Estrategista ──> Pesquisador ──> Copywriter ──> Designer ──> Té
 | Pesquisador | Benchmark, perfis do terceiro setor | Tendências, oportunidades, riscos, datas da causa | `estrategia/02-pesquisa-tendencias.md` |
 | Copywriter | Pautas aprovadas | Slides, legenda Instagram, legenda Facebook, alt text, revisão no-ai-slop | `ferramentas/conteudo.py`, `estrategia/04-guia-copy.md` |
 | Designer | Copy pronta | Tipo de slide, artes renderizadas | `ferramentas/render.py`, `estrategia/03-sistema-visual.md` |
-| Técnico | Artes e legendas | Pastas por post, página do mês, commit e push, link do GitHub Pages | `novembro/`, `dezembro/`, `index.html` |
+| Técnico | Artes e legendas | Pastas por post, página do mês, commit e push, link do GitHub Pages | `novembro-dezembro/`, `index.html` |
 
 ## Comandos do técnico
 
@@ -32,15 +32,15 @@ git add -A; git commit -m "Dezembro: ajustes da revisão"; git push
 
 ## Revisão e aprovação
 
-1. O técnico publica a página do mês no GitHub Pages (`substratodigital.github.io/fundacao/<mes>/`).
-2. Cada post tem botão "Aprovar no WhatsApp" e campo de ajustes que gera a mensagem pronta.
+1. O técnico publica a página do mês no GitHub Pages (`substratodigital.github.io/fundacao/<mes>/` (primeira entrega: `/novembro-dezembro/`)).
+2. Barros (gestor), Patrícia e Agda (validadoras) revisam. Cada post tem botão "Aprovar no WhatsApp" e campo de ajustes que gera a mensagem pronta.
 3. Ajustes voltam para o copywriter ou o designer, que editam `conteudo.py`; o técnico roda de novo os dois scripts.
 4. Post com status "Rascunho com pendência" não é publicado até a pendência sair da ficha.
 
 ## Pasta de cada post
 
 ```
-dezembro/12-quem-cuida-de-quem-cuida/
+novembro-dezembro/12-quem-cuida-de-quem-cuida/
   1.jpg ... 5.jpg     artes do feed, na ordem
   story-1.jpg ...     stories, quando houver
   instagram.txt       legenda com hashtags

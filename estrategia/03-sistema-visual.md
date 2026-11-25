@@ -35,6 +35,14 @@ Feed 1080x1350 (4:5), JPG qualidade 92. Margem de segurança de 92 px nas latera
 
 Preferir rosto de adulto, mãos trabalhando, equipe, detalhe que não identifique o lugar. Nunca criança, quarto, cama, documento, placa ou fachada. Os placeholders listrados nas artes marcam onde entra foto real e saem da peça antes de publicar.
 
-## Ilustração
+## Ilustração em massinha
 
-Massinha fosca, adultos em gestão e formação, casas abstratas. A ilustração de "propósito institucional" usa lilás fora da paleta; não usamos nos posts até a decisão sobre regerar as cenas.
+As capas dos carrosséis e as artes limpas usam cenas em massinha geradas no Magnific a partir de duas artes do calendário 2027 da fundação (dezembro e setembro) como referência de estilo. Ficam em `ferramentas/massinha/`, na pasta "Net do Bem · Instagram e Facebook" do Magnific.
+
+- Só adultos: equipe, cuidadores, voluntários, mãos segurando o coração de rede. Nenhuma criança, mesmo ilustrada.
+- Coração de rede verde-água com nós lilás e amarelos, fios coloridos no chão, casas abstratas.
+- Topo de 40% vazio em creme para o título; o título fica em Manrope ExtraBold verde profundo, como no site.
+- Cards de posicionamento continuam lisos, sem ilustração, como pede o briefing.
+- Slides que pedem foto real (bastidores e depoimento) seguem com foto real; a massinha não substitui pessoa real.
+
+Custo no Magnific nesta entrega: 20 imagens, cerca de 1.300 créditos do limite de 5.000.
