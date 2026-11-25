@@ -8,5 +8,5 @@ code,pre{background:#fff;border:1px solid #E6E0D3;border-radius:8px}pre{padding:
 <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script></head><body>
 <header><a href="index.html">← Fundação Net do Bem · Instagram e Facebook</a></header><main id="c">Carregando…</main>
 <script>const f=new URLSearchParams(location.search).get('f')||'';
-if(!/^(estrategia|briefing)\/[\w.-]+\.md$/.test(f)){document.getElementById('c').textContent='Documento não encontrado.'}
+if(!/^(estrategia|briefing|roteiros)\/[\w.-]+\.md$/.test(f)){document.getElementById('c').textContent='Documento não encontrado.'}
 else fetch(f).then(r=>r.text()).then(t=>{document.getElementById('c').innerHTML=marked.parse(t);document.title=(t.match(/^# (.*)/m)||[,'Documento'])[1]})</script></body></html>

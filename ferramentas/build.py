@@ -218,6 +218,7 @@ def month_page(mes):
 {cal}</section>
 <section id="posts"><h2 class="sec-t">Posts para revisão</h2><p class="sec-p">Arraste as imagens, copie a legenda de cada rede e aprove ou peça ajuste. Post com pendência só vai ao ar depois que ela for resolvida.</p>
 {filt}{posts}</section>{reserva}
+<section><h2 class="sec-t">Roteiros e captação</h2><p class="sec-p">Rascunhos com pendência para a equipe revisar.</p>{"".join(f'<a class="tl" href="../doc.html?f={f}"><div class="inf"><div class="tt">{e(t)}</div><div class="mt">{f}</div></div></a>' for f, t in DOCS if f.startswith("roteiros/"))}</section>
 <p class="foot">Fundação Net do Bem · @fundacao.netdobem · Conteúdo preparado pela Substrato Digital</p></main>
 <div class="toast"></div><script>{JS}</script></body></html>"""
 
@@ -227,6 +228,11 @@ DOCS = [("estrategia/01-estrategia.md", "Estratégia, conflitos resolvidos e cal
         ("estrategia/03-sistema-visual.md", "Sistema visual"),
         ("estrategia/04-guia-copy.md", "Guia de copy e revisão no-ai-slop"),
         ("estrategia/05-fluxo-orquestrado.md", "Fluxo dos 5 papéis e aprovação"),
+        ("roteiros/01-captacao-inauguracao.md", "Lista de captação da inauguração (26/11)"),
+        ("roteiros/02-fala-abertura-andre.md", "Fala de abertura do André"),
+        ("roteiros/03-reels-andre.md", "Roteiro do Reels do André"),
+        ("roteiros/04-faq-provisorio.md", "Respostas provisórias para comentários e Direct"),
+        ("roteiros/05-entrevista-cuidador.md", "Roteiro de entrevista com cuidador"),
         ("briefing/briefing-net-do-bem-v2.md", "Briefing V2 (fonte de verdade)")]
 
 
@@ -263,7 +269,7 @@ code,pre{background:#fff;border:1px solid #E6E0D3;border-radius:8px}pre{padding:
 <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script></head><body>
 <header><a href="index.html">← Fundação Net do Bem · Instagram e Facebook</a></header><main id="c">Carregando…</main>
 <script>const f=new URLSearchParams(location.search).get('f')||'';
-if(!/^(estrategia|briefing)\\/[\\w.-]+\\.md$/.test(f)){document.getElementById('c').textContent='Documento não encontrado.'}
+if(!/^(estrategia|briefing|roteiros)\\/[\\w.-]+\\.md$/.test(f)){document.getElementById('c').textContent='Documento não encontrado.'}
 else fetch(f).then(r=>r.text()).then(t=>{document.getElementById('c').innerHTML=marked.parse(t);document.title=(t.match(/^# (.*)/m)||[,'Documento'])[1]})</script></body></html>"""
 
 

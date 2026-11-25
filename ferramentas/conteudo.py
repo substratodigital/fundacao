@@ -372,7 +372,7 @@ POSTS = [
             {"tipo": "capa", "img": "perguntas-a.jpg", "kicker": "Respostas curtas", "titulo": "3 perguntas da inauguração"},
             {"tipo": "pergunta", "num": "1", "pergunta": "Vocês acolhem crianças?", "resposta": "Não. Apoiamos as casas de acolhimento e as equipes que trabalham nelas."},
             {"tipo": "pergunta", "num": "2", "pergunta": "Como uma casa participa?", "resposta": "O primeiro passo é responder ao mapeamento em portal.netdobem.org.br."},
-            {"tipo": "pergunta", "num": "3", "pergunta": "Como eu posso ajudar?", "resposta": "[Resposta oficial a confirmar com a diretoria]"},
+            {"tipo": "pergunta", "num": "3", "pergunta": "Como eu posso ajudar?", "resposta": "Seguindo o perfil e compartilhando com quem trabalha com acolhimento. As formas de apoio vêm em breve."},
             {"tipo": "cta", "texto": "Salva e compartilha", "apoio": "Tem outra pergunta? Responderemos nos próximos posts."},
         ],
         "legenda_ig": (
