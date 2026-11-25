@@ -1,0 +1,88 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fundação Net do Bem · Instagram e Facebook</title><meta name="robots" content="noindex"><link rel="icon" href="ferramentas/brand/icon_green.svg">
+<style>
+@font-face{font-family:Manrope;font-weight:800;src:url(ferramentas/fonts/manrope-latin-800-normal.woff2)}
+@font-face{font-family:Manrope;font-weight:700;src:url(ferramentas/fonts/manrope-latin-700-normal.woff2)}
+@font-face{font-family:Montserrat;font-weight:400;src:url(ferramentas/fonts/montserrat-latin-400-normal.woff2)}
+@font-face{font-family:Montserrat;font-weight:600;src:url(ferramentas/fonts/montserrat-latin-600-normal.woff2)}
+:root{--verde:#2F6F4C;--marca:#66AA83;--menta:#5BDEA8;--creme:#FAF6EF;--tinta:#1F2330;--muted:#5B6B63;--coral:#DE6F5B;--borda:#E6E0D3;--card:#fff;--wpp:#25D366;--wppd:#128C7E;--alerta:#9A4A12;--alerta-bg:#FFF4E5;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Montserrat,system-ui,sans-serif;background:var(--creme);color:var(--tinta);line-height:1.6;padding-bottom:80px}
+h1,h2,h3,.h{font-family:Manrope,Montserrat,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+a{color:var(--verde)}
+.hero{background:linear-gradient(135deg,#21533A 0%,var(--verde) 60%,#3E8A62 100%);color:#fff;padding:44px 20px 38px;text-align:center;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-90px;bottom:-120px;width:380px;height:380px;background:url(ferramentas/brand/icon_white.svg) no-repeat center/contain;opacity:.08}
+.hero .in{max-width:820px;margin:0 auto;position:relative;z-index:1}
+.hero img.lg{height:54px;margin-bottom:18px}
+.tag{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);padding:6px 16px;border-radius:30px;font-size:12px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:14px}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--menta)}
+.hero h1{font-size:clamp(28px,5.5vw,42px);margin-bottom:12px}
+.hero p{font-size:clamp(15px,3.6vw,18px);opacity:.92;max-width:680px;margin:0 auto}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
+.badge{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:20px;font-size:13px;font-weight:600}
+.nav{position:sticky;top:0;z-index:20;background:rgba(250,246,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--borda);display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px}
+.nav a{text-decoration:none;font-weight:600;font-size:14px;padding:8px 14px;border-radius:30px;background:#fff;border:1px solid var(--borda);color:var(--tinta)}
+.nav a.wa{background:var(--wpp);border-color:var(--wpp);color:#fff}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+section{margin-top:36px}
+.sec-t{font-size:24px;color:var(--verde);margin-bottom:6px}
+.sec-p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.box{background:#fff;border:1px solid var(--borda);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.semana{font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:22px 0 10px;display:flex;justify-content:space-between}
+.tl{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--borda);border-radius:14px;padding:10px;margin-bottom:10px;text-decoration:none;color:inherit;transition:.2s}
+.tl:hover{box-shadow:0 10px 30px rgba(47,111,76,.12);transform:translateY(-1px)}
+.dbox{width:56px;flex:none;text-align:center;background:var(--creme);border-radius:10px;padding:6px 0}
+.dbox b{display:block;font-family:Manrope;font-size:22px;color:var(--verde);line-height:1.1}.dbox span{font-size:11px;text-transform:uppercase;color:var(--muted);font-weight:600}
+.tl img{width:52px;height:65px;object-fit:cover;border-radius:6px;flex:none}
+.tl .inf{flex:1;min-width:0}.tl .tt{font-weight:700;font-size:15px;line-height:1.3}.tl .mt{font-size:12px;color:var(--muted)}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.3px;margin-right:4px}
+.f0{background:#E3F4EA;color:#21533A}.f1{background:#E2EEF8;color:#1F4E70}.f2{background:#F6EFD3;color:#6B5A10}
+.ok{background:#E3F4EA;color:#21533A}.pend{background:var(--alerta-bg);color:var(--alerta)}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.filtros button{font:600 13px Montserrat;padding:8px 14px;border-radius:30px;border:1px solid var(--borda);background:#fff;cursor:pointer}
+.filtros button.on{background:var(--verde);color:#fff;border-color:var(--verde)}
+.post{background:#fff;border:1px solid var(--borda);border-radius:22px;margin-bottom:28px;overflow:hidden;box-shadow:0 8px 30px rgba(47,111,76,.06);scroll-margin-top:70px}
+.ph{padding:18px 18px 12px}.ph .n{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.ph h3{font-size:22px;color:var(--verde);margin:6px 0 8px}
+.ph .sub{font-size:13px;color:var(--muted)}
+.slider{position:relative;background:#EFEAE0}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.track::-webkit-scrollbar{display:none}
+.track img{flex:none;width:100%;scroll-snap-align:center;display:block;aspect-ratio:4/5;object-fit:contain;background:#EFEAE0}
+.track img.v{aspect-ratio:9/16;max-height:80vh}
+.arr{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font-size:20px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.arr.l{left:10px}.arr.r{right:10px}
+.cnt{position:absolute;top:12px;right:12px;background:rgba(31,35,48,.7);color:#fff;font-size:12px;font-weight:600;padding:4px 10px;border-radius:20px}
+.thumbs{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;background:#F6F2EA}
+.thumbs img{width:46px;height:58px;object-fit:cover;border-radius:6px;cursor:pointer;opacity:.6;border:2px solid transparent;flex:none}
+.thumbs img.on{opacity:1;border-color:var(--verde)}
+.pb{padding:16px 18px 20px}
+.alert{background:var(--alerta-bg);border-left:4px solid #E08A2E;border-radius:10px;padding:12px 14px;font-size:14px;margin-bottom:14px}
+.alert b{color:var(--alerta)}.alert ul{margin:6px 0 0 18px}
+.info{background:#F1F7F3;border-left:4px solid var(--marca);border-radius:10px;padding:12px 14px;font-size:14px;margin-bottom:14px}
+.info ol,.info ul{margin:6px 0 0 18px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:13px;margin-bottom:14px}.meta div span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px;font-weight:600}
+.tabs{display:flex;gap:6px;margin-bottom:8px}
+.tabs button{font:600 13px Montserrat;padding:7px 14px;border-radius:30px;border:1px solid var(--borda);background:#fff;cursor:pointer}
+.tabs button.on{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.leg{white-space:pre-wrap;background:var(--creme);border-radius:12px;padding:14px;font-size:14.5px;border:1px solid var(--borda)}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.btn{font:700 14px Montserrat;padding:11px 16px;border-radius:12px;border:0;cursor:pointer;text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.b-copy{background:#fff;border:1px solid var(--borda);color:var(--tinta)}
+.b-ok{background:var(--wpp);color:#fff}.b-adj{background:#fff;border:1px solid var(--borda);color:var(--tinta)}
+details{margin-top:12px;font-size:14px}summary{cursor:pointer;font-weight:600;color:var(--verde)}
+.adj{display:none;margin-top:10px}.adj.on{display:block}
+textarea{width:100%;min-height:90px;border:1px solid var(--borda);border-radius:12px;padding:10px;font:14px Montserrat}
+.foot{text-align:center;color:var(--muted);font-size:13px;margin-top:40px}
+.res li{margin:6px 0 0 18px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--tinta);color:#fff;padding:10px 18px;border-radius:30px;font-size:14px;opacity:0;transition:.3s;pointer-events:none}.toast.on{opacity:1}
+</style></head><body>
+<header class="hero"><div class="in"><img class="lg" src="ferramentas/brand/NET-DO-BEM-WHITE-HORIZONTAL.svg" alt="Fundação Net do Bem">
+<div><span class="tag"><i></i>Instagram e Facebook · Revisão do time</span></div><h1>Fortalecer quem cuida também é proteger a infância.</h1>
+<p>Calendário de posts da Fundação Net do Bem, organizado por mês. Cada página traz as artes, as legendas das duas redes e o botão de aprovação.</p></div></header>
+<main class="wrap"><section><h2 class="sec-t">Meses</h2><a class="tl" href="novembro/index.html" style="padding:14px"><img src="novembro/01-hoje-e-dia-de-inaugurar/1.jpg" style="width:72px;height:90px">
+<div class="inf"><div class="tt" style="font-size:19px">Novembro 2026</div><div class="mt">Fase 0 da inauguração: cinco posts de 26 a 30 de novembro para a Net do Bem existir no Instagram e no Facebook. Um CTA só na semana inteira: siga e compartilhe.</div>
+<div style="margin-top:6px"><span class="pill ok">4 prontos</span><span class="pill pend">1 com pendência</span></div></div></a><a class="tl" href="dezembro/index.html" style="padding:14px"><img src="dezembro/06-a-net-do-bem-em-5-slides/1.jpg" style="width:72px;height:90px">
+<div class="inf"><div class="tt" style="font-size:19px">Dezembro 2026</div><div class="mt">Fase 1, quem somos, e Fase 2, quem cuida. Onze posts para explicar a fundação em 10 segundos e abrir o nosso território: quem cuida de quem cuida.</div>
+<div style="margin-top:6px"><span class="pill ok">6 prontos</span><span class="pill pend">5 com pendência</span></div></div></a><div class="tl" style="padding:14px;opacity:.7"><div class="inf"><div class="tt" style="font-size:19px">Janeiro 2027</div><div class="mt">Fase 3 · Como ajudar. Pautas definidas na estratégia, arte depois dos primeiros dados do perfil.</div></div></div><div class="tl" style="padding:14px;opacity:.7"><div class="inf"><div class="tt" style="font-size:19px">Fevereiro 2027</div><div class="mt">Fase 4 · Transparência. Pautas definidas na estratégia, arte depois dos primeiros dados do perfil.</div></div></div></section>
+<section><h2 class="sec-t">Estratégia e documentação</h2><a class="tl" href="doc.html?f=estrategia/01-estrategia.md"><div class="inf"><div class="tt">Estratégia, conflitos resolvidos e calendário</div><div class="mt">estrategia/01-estrategia.md</div></div></a><a class="tl" href="doc.html?f=estrategia/02-pesquisa-tendencias.md"><div class="inf"><div class="tt">Pesquisa: tendências e oportunidades</div><div class="mt">estrategia/02-pesquisa-tendencias.md</div></div></a><a class="tl" href="doc.html?f=estrategia/03-sistema-visual.md"><div class="inf"><div class="tt">Sistema visual</div><div class="mt">estrategia/03-sistema-visual.md</div></div></a><a class="tl" href="doc.html?f=estrategia/04-guia-copy.md"><div class="inf"><div class="tt">Guia de copy e revisão no-ai-slop</div><div class="mt">estrategia/04-guia-copy.md</div></div></a><a class="tl" href="doc.html?f=estrategia/05-fluxo-orquestrado.md"><div class="inf"><div class="tt">Fluxo dos 5 papéis e aprovação</div><div class="mt">estrategia/05-fluxo-orquestrado.md</div></div></a><a class="tl" href="doc.html?f=briefing/briefing-net-do-bem-v2.md"><div class="inf"><div class="tt">Briefing V2 (fonte de verdade)</div><div class="mt">briefing/briefing-net-do-bem-v2.md</div></div></a></section>
+<p class="foot">Substrato Digital para Fundação Net do Bem</p></main></body></html>

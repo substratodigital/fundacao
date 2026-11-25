@@ -1,0 +1,448 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dezembro 2026 · Instagram e Facebook · Fundação Net do Bem</title><meta name="robots" content="noindex">
+<link rel="icon" href="../ferramentas/brand/icon_green.svg"><style>
+@font-face{font-family:Manrope;font-weight:800;src:url(../ferramentas/fonts/manrope-latin-800-normal.woff2)}
+@font-face{font-family:Manrope;font-weight:700;src:url(../ferramentas/fonts/manrope-latin-700-normal.woff2)}
+@font-face{font-family:Montserrat;font-weight:400;src:url(../ferramentas/fonts/montserrat-latin-400-normal.woff2)}
+@font-face{font-family:Montserrat;font-weight:600;src:url(../ferramentas/fonts/montserrat-latin-600-normal.woff2)}
+:root{--verde:#2F6F4C;--marca:#66AA83;--menta:#5BDEA8;--creme:#FAF6EF;--tinta:#1F2330;--muted:#5B6B63;--coral:#DE6F5B;--borda:#E6E0D3;--card:#fff;--wpp:#25D366;--wppd:#128C7E;--alerta:#9A4A12;--alerta-bg:#FFF4E5;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Montserrat,system-ui,sans-serif;background:var(--creme);color:var(--tinta);line-height:1.6;padding-bottom:80px}
+h1,h2,h3,.h{font-family:Manrope,Montserrat,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+a{color:var(--verde)}
+.hero{background:linear-gradient(135deg,#21533A 0%,var(--verde) 60%,#3E8A62 100%);color:#fff;padding:44px 20px 38px;text-align:center;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-90px;bottom:-120px;width:380px;height:380px;background:url(../ferramentas/brand/icon_white.svg) no-repeat center/contain;opacity:.08}
+.hero .in{max-width:820px;margin:0 auto;position:relative;z-index:1}
+.hero img.lg{height:54px;margin-bottom:18px}
+.tag{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);padding:6px 16px;border-radius:30px;font-size:12px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:14px}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--menta)}
+.hero h1{font-size:clamp(28px,5.5vw,42px);margin-bottom:12px}
+.hero p{font-size:clamp(15px,3.6vw,18px);opacity:.92;max-width:680px;margin:0 auto}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
+.badge{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:20px;font-size:13px;font-weight:600}
+.nav{position:sticky;top:0;z-index:20;background:rgba(250,246,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--borda);display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px}
+.nav a{text-decoration:none;font-weight:600;font-size:14px;padding:8px 14px;border-radius:30px;background:#fff;border:1px solid var(--borda);color:var(--tinta)}
+.nav a.wa{background:var(--wpp);border-color:var(--wpp);color:#fff}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+section{margin-top:36px}
+.sec-t{font-size:24px;color:var(--verde);margin-bottom:6px}
+.sec-p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.box{background:#fff;border:1px solid var(--borda);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.semana{font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:22px 0 10px;display:flex;justify-content:space-between}
+.tl{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--borda);border-radius:14px;padding:10px;margin-bottom:10px;text-decoration:none;color:inherit;transition:.2s}
+.tl:hover{box-shadow:0 10px 30px rgba(47,111,76,.12);transform:translateY(-1px)}
+.dbox{width:56px;flex:none;text-align:center;background:var(--creme);border-radius:10px;padding:6px 0}
+.dbox b{display:block;font-family:Manrope;font-size:22px;color:var(--verde);line-height:1.1}.dbox span{font-size:11px;text-transform:uppercase;color:var(--muted);font-weight:600}
+.tl img{width:52px;height:65px;object-fit:cover;border-radius:6px;flex:none}
+.tl .inf{flex:1;min-width:0}.tl .tt{font-weight:700;font-size:15px;line-height:1.3}.tl .mt{font-size:12px;color:var(--muted)}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.3px;margin-right:4px}
+.f0{background:#E3F4EA;color:#21533A}.f1{background:#E2EEF8;color:#1F4E70}.f2{background:#F6EFD3;color:#6B5A10}
+.ok{background:#E3F4EA;color:#21533A}.pend{background:var(--alerta-bg);color:var(--alerta)}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.filtros button{font:600 13px Montserrat;padding:8px 14px;border-radius:30px;border:1px solid var(--borda);background:#fff;cursor:pointer}
+.filtros button.on{background:var(--verde);color:#fff;border-color:var(--verde)}
+.post{background:#fff;border:1px solid var(--borda);border-radius:22px;margin-bottom:28px;overflow:hidden;box-shadow:0 8px 30px rgba(47,111,76,.06);scroll-margin-top:70px}
+.ph{padding:18px 18px 12px}.ph .n{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.ph h3{font-size:22px;color:var(--verde);margin:6px 0 8px}
+.ph .sub{font-size:13px;color:var(--muted)}
+.slider{position:relative;background:#EFEAE0}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.track::-webkit-scrollbar{display:none}
+.track img{flex:none;width:100%;scroll-snap-align:center;display:block;aspect-ratio:4/5;object-fit:contain;background:#EFEAE0}
+.track img.v{aspect-ratio:9/16;max-height:80vh}
+.arr{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font-size:20px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.arr.l{left:10px}.arr.r{right:10px}
+.cnt{position:absolute;top:12px;right:12px;background:rgba(31,35,48,.7);color:#fff;font-size:12px;font-weight:600;padding:4px 10px;border-radius:20px}
+.thumbs{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;background:#F6F2EA}
+.thumbs img{width:46px;height:58px;object-fit:cover;border-radius:6px;cursor:pointer;opacity:.6;border:2px solid transparent;flex:none}
+.thumbs img.on{opacity:1;border-color:var(--verde)}
+.pb{padding:16px 18px 20px}
+.alert{background:var(--alerta-bg);border-left:4px solid #E08A2E;border-radius:10px;padding:12px 14px;font-size:14px;margin-bottom:14px}
+.alert b{color:var(--alerta)}.alert ul{margin:6px 0 0 18px}
+.info{background:#F1F7F3;border-left:4px solid var(--marca);border-radius:10px;padding:12px 14px;font-size:14px;margin-bottom:14px}
+.info ol,.info ul{margin:6px 0 0 18px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:13px;margin-bottom:14px}.meta div span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px;font-weight:600}
+.tabs{display:flex;gap:6px;margin-bottom:8px}
+.tabs button{font:600 13px Montserrat;padding:7px 14px;border-radius:30px;border:1px solid var(--borda);background:#fff;cursor:pointer}
+.tabs button.on{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.leg{white-space:pre-wrap;background:var(--creme);border-radius:12px;padding:14px;font-size:14.5px;border:1px solid var(--borda)}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.btn{font:700 14px Montserrat;padding:11px 16px;border-radius:12px;border:0;cursor:pointer;text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.b-copy{background:#fff;border:1px solid var(--borda);color:var(--tinta)}
+.b-ok{background:var(--wpp);color:#fff}.b-adj{background:#fff;border:1px solid var(--borda);color:var(--tinta)}
+details{margin-top:12px;font-size:14px}summary{cursor:pointer;font-weight:600;color:var(--verde)}
+.adj{display:none;margin-top:10px}.adj.on{display:block}
+textarea{width:100%;min-height:90px;border:1px solid var(--borda);border-radius:12px;padding:10px;font:14px Montserrat}
+.foot{text-align:center;color:var(--muted);font-size:13px;margin-top:40px}
+.res li{margin:6px 0 0 18px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--tinta);color:#fff;padding:10px 18px;border-radius:30px;font-size:14px;opacity:0;transition:.3s;pointer-events:none}.toast.on{opacity:1}
+</style></head><body>
+<header class="hero"><div class="in"><img class="lg" src="../ferramentas/brand/NET-DO-BEM-WHITE-HORIZONTAL.svg" alt="Fundação Net do Bem">
+<div><span class="tag"><i></i>Fundação Net do Bem · Dezembro 2026</span></div>
+<h1>Dezembro · Calendário de posts</h1><p>Fase 1, quem somos, e Fase 2, quem cuida. Onze posts para explicar a fundação em 10 segundos e abrir o nosso território: quem cuida de quem cuida.</p>
+<div class="badges"><span class="badge">11 posts</span><span class="badge">6 prontos</span><span class="badge">5 com pendência</span><span class="badge">Instagram + Facebook</span></div></div></header>
+<nav class="nav"><a href="../index.html">← Todos os meses</a><a href="#calendario">Calendário</a><a href="#posts">Posts (11)</a><a class="wa" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20calend%C3%A1rio%20de%20Dezembro%20da%20Funda%C3%A7%C3%A3o%20Net%20do%20Bem%20%2811%20posts%29%20e%20est%C3%A1%20APROVADO.">Aprovar mês no WhatsApp</a></nav>
+<main class="wrap">
+<section id="calendario"><h2 class="sec-t">Calendário sugerido</h2><p class="sec-p">Terça e quinta às 18h, sábado às 11h. Datas da Fase 0 seguem o Briefing V2.</p>
+<div class="box"><b>Aprovação do calendário</b><div class="row"><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20calend%C3%A1rio%20de%20Dezembro%20da%20Funda%C3%A7%C3%A3o%20Net%20do%20Bem%20%2811%20posts%29%20e%20est%C3%A1%20APROVADO.">Aprovar calendário completo</a><a class="btn b-adj" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Sobre%20o%20calend%C3%A1rio%20de%20Dezembro%20da%20Funda%C3%A7%C3%A3o%20Net%20do%20Bem%2C%20sugiro%20o%20seguinte%20ajuste%3A%20">Sugerir mudança de data</a></div></div>
+<div class="semana"><span>Semana de 30/11 a 06/12</span><span>3 posts</span></div><a class="tl" href="#post-06"><div class="dbox"><b>01</b><span>Ter</span></div>
+<img src="06-a-net-do-bem-em-5-slides/1.jpg" alt=""><div class="inf"><div><span class="pill f1">Quem somos</span><span class="pill ok">Pronto</span></div>
+<div class="tt">A Net do Bem em 5 slides</div><div class="mt">Carrossel educativo · CTA: Salva e compartilha</div></div></a><a class="tl" href="#post-07"><div class="dbox"><b>03</b><span>Qui</span></div>
+<img src="07-o-que-nao-fazemos/1.jpg" alt=""><div class="inf"><div><span class="pill f1">Quem somos</span><span class="pill ok">Pronto</span></div>
+<div class="tt">O que não fazemos</div><div class="mt">Carrossel educativo · CTA: Salva e compartilha</div></div></a><a class="tl" href="#post-08"><div class="dbox"><b>05</b><span>Sáb</span></div>
+<img src="08-por-que-sorocaba/1.jpg" alt=""><div class="inf"><div><span class="pill f1">Quem somos</span><span class="pill pend">Pendência</span></div>
+<div class="tt">Por que Sorocaba?</div><div class="mt">Carrossel educativo · CTA: Salva e compartilha</div></div></a><div class="semana"><span>Semana de 07/12 a 13/12</span><span>3 posts</span></div><a class="tl" href="#post-09"><div class="dbox"><b>08</b><span>Ter</span></div>
+<img src="09-por-que-criei-a-net-do-bem/1.jpg" alt=""><div class="inf"><div><span class="pill f1">Quem somos</span><span class="pill pend">Pendência</span></div>
+<div class="tt">Por que criei a Net do Bem</div><div class="mt">Reels 30 a 45 s + capa · CTA: Salva e compartilha</div></div></a><a class="tl" href="#post-10"><div class="dbox"><b>10</b><span>Qui</span></div>
+<img src="10-3-perguntas-da-inauguracao/1.jpg" alt=""><div class="inf"><div><span class="pill f1">Quem somos</span><span class="pill pend">Pendência</span></div>
+<div class="tt">3 perguntas da inauguração</div><div class="mt">Carrossel educativo · CTA: Salva e compartilha</div></div></a><a class="tl" href="#post-11"><div class="dbox"><b>12</b><span>Sáb</span></div>
+<img src="11-quem-fortalece-uma-organizacao-alcanca-muitas-hi/1.jpg" alt=""><div class="inf"><div><span class="pill f1">Quem somos</span><span class="pill ok">Pronto</span></div>
+<div class="tt">Quem fortalece uma organização alcança muitas histórias</div><div class="mt">Card de posicionamento · CTA: Salva e compartilha</div></div></a><div class="semana"><span>Semana de 14/12 a 20/12</span><span>3 posts</span></div><a class="tl" href="#post-12"><div class="dbox"><b>15</b><span>Ter</span></div>
+<img src="12-quem-cuida-de-quem-cuida/1.jpg" alt=""><div class="inf"><div><span class="pill f2">Quem cuida</span><span class="pill ok">Pronto</span></div>
+<div class="tt">Quem cuida de quem cuida?</div><div class="mt">Carrossel educativo · CTA: Comenta: quero ajudar</div></div></a><a class="tl" href="#post-13"><div class="dbox"><b>17</b><span>Qui</span></div>
+<img src="13-3-necessidades-que-ninguem-ve/1.jpg" alt=""><div class="inf"><div><span class="pill f2">Quem cuida</span><span class="pill ok">Pronto</span></div>
+<div class="tt">3 necessidades que ninguém vê</div><div class="mt">Carrossel lista · CTA: Comenta: quero ajudar</div></div></a><a class="tl" href="#post-14"><div class="dbox"><b>19</b><span>Sáb</span></div>
+<img src="14-por-tras-de-cada-casa-tem-gente/1.jpg" alt=""><div class="inf"><div><span class="pill f2">Quem cuida</span><span class="pill ok">Pronto</span></div>
+<div class="tt">Por trás de cada casa, tem gente</div><div class="mt">Card de posicionamento · CTA: Comenta: quero ajudar</div></div></a><div class="semana"><span>Semana de 21/12 a 27/12</span><span>1 post</span></div><a class="tl" href="#post-15"><div class="dbox"><b>22</b><span>Ter</span></div>
+<img src="15-da-para-cuidar-sem-se-anular/1.jpg" alt=""><div class="inf"><div><span class="pill f2">Quem cuida</span><span class="pill pend">Pendência</span></div>
+<div class="tt">Dá para cuidar sem se anular?</div><div class="mt">Carrossel educativo · CTA: Compartilha com quem cuida de alguém</div></div></a><div class="semana"><span>Semana de 28/12 a 03/01</span><span>1 post</span></div><a class="tl" href="#post-16"><div class="dbox"><b>29</b><span>Ter</span></div>
+<img src="16-o-que-eu-queria-que-soubessem/1.jpg" alt=""><div class="inf"><div><span class="pill f2">Quem cuida</span><span class="pill pend">Pendência</span></div>
+<div class="tt">O que eu queria que soubessem</div><div class="mt">Foto real com faixa ou Reels · CTA: Compartilha com quem cuida de alguém</div></div></a></section>
+<section id="posts"><h2 class="sec-t">Posts para revisão</h2><p class="sec-p">Arraste as imagens, copie a legenda de cada rede e aprove ou peça ajuste. Post com pendência só vai ao ar depois que ela for resolvida.</p>
+<div class="filtros"><button class="on" data-g="fase" data-v="*">Todas as fases</button><button data-g="fase" data-v="1">Fase 1</button><button data-g="fase" data-v="2">Fase 2</button><button class="on" data-g="status" data-v="*">Todos</button><button data-g="status" data-v="pronto">Prontos</button><button data-g="status" data-v="pendencia">Com pendência</button></div>
+<article class="post" id="post-06" data-fase="1" data-status="pronto">
+ <div class="ph"><div class="n">Post 06 · Terça-feira, 01/12 · 18h</div>
+  <h3>A Net do Bem em 5 slides</h3>
+  <div class="sub"><span class="pill f1">Fase 1 · Quem somos</span><span class="pill ok">Pronto</span> Carrossel educativo · 6 imagens</div></div>
+ <div class="slider"><div class="track"><img loading="lazy" class="" src="06-a-net-do-bem-em-5-slides/1.jpg" alt="Slide 1"><img loading="lazy" class="" src="06-a-net-do-bem-em-5-slides/2.jpg" alt="Slide 2"><img loading="lazy" class="" src="06-a-net-do-bem-em-5-slides/3.jpg" alt="Slide 3"><img loading="lazy" class="" src="06-a-net-do-bem-em-5-slides/4.jpg" alt="Slide 4"><img loading="lazy" class="" src="06-a-net-do-bem-em-5-slides/5.jpg" alt="Slide 5"><img loading="lazy" class="" src="06-a-net-do-bem-em-5-slides/6.jpg" alt="Slide 6"></div><button class="arr l" aria-label="Anterior">‹</button><button class="arr r" aria-label="Próximo">›</button><span class="cnt">1/6</span></div>
+ <div class="thumbs"><img src="06-a-net-do-bem-em-5-slides/1.jpg" class="on"><img src="06-a-net-do-bem-em-5-slides/2.jpg" class=""><img src="06-a-net-do-bem-em-5-slides/3.jpg" class=""><img src="06-a-net-do-bem-em-5-slides/4.jpg" class=""><img src="06-a-net-do-bem-em-5-slides/5.jpg" class=""><img src="06-a-net-do-bem-em-5-slides/6.jpg" class=""></div>
+ <div class="pb">
+  
+  <div class="meta"><div><span>Pauta</span>Pauta-mãe 1 · Quem somos</div><div><span>CTA único</span>Salva e compartilha</div>
+   <div><span>Público</span>Todos os públicos</div><div><span>Objetivo</span>A pessoa entender em 10 segundos o que a fundação faz. Post para fixar no perfil.</div></div>
+  
+  <div class="tabs"><button class="on" data-r="ig">Instagram</button><button data-r="fb">Facebook</button></div>
+  <div class="leg" data-r="ig">A Net do Bem em 5 slides.
+
+Se você chegou agora, este é o resumo. Apoiamos casas de acolhimento e as equipes que trabalham nelas, com pesquisa, formação, apoio de gestão e conexão com parceiros. O primeiro passo é ouvir as casas, com um mapeamento que já está no ar.
+
+Salva e compartilha.
+
+#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida</div><div class="leg" data-r="fb" hidden>A Fundação Net do Bem em 5 slides.
+
+Se você chegou agora, este é o resumo. Apoiamos casas de acolhimento e as equipes que trabalham nelas, com pesquisa, formação, apoio de gestão e conexão com parceiros. O primeiro passo é ouvir as casas, com um mapeamento que já está no ar.
+
+Salve e compartilhe.</div>
+  <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20post%2006%20da%20Net%20do%20Bem%20%2801/12%2C%20%22A%20Net%20do%20Bem%20em%205%20slides%22%29%20e%20est%C3%A1%20APROVADO.">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
+  <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="Olá! Ajuste no post 06 da Net do Bem (01/12, &quot;A Net do Bem em 5 slides&quot;): ">Enviar ajuste no WhatsApp</button></div></div>
+  <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">Carrossel em fundo creme com títulos em verde. Slides: somos uma fundação de Sorocaba; cuidamos de quem cuida; quatro frentes de trabalho (pesquisa, capacitação, aceleração e articulação); começamos ouvindo; e o convite para salvar e compartilhar.</p>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+ </div>
+</article>
+<article class="post" id="post-07" data-fase="1" data-status="pronto">
+ <div class="ph"><div class="n">Post 07 · Quinta-feira, 03/12 · 18h</div>
+  <h3>O que não fazemos</h3>
+  <div class="sub"><span class="pill f1">Fase 1 · Quem somos</span><span class="pill ok">Pronto</span> Carrossel educativo · 6 imagens</div></div>
+ <div class="slider"><div class="track"><img loading="lazy" class="" src="07-o-que-nao-fazemos/1.jpg" alt="Slide 1"><img loading="lazy" class="" src="07-o-que-nao-fazemos/2.jpg" alt="Slide 2"><img loading="lazy" class="" src="07-o-que-nao-fazemos/3.jpg" alt="Slide 3"><img loading="lazy" class="" src="07-o-que-nao-fazemos/4.jpg" alt="Slide 4"><img loading="lazy" class="" src="07-o-que-nao-fazemos/5.jpg" alt="Slide 5"><img loading="lazy" class="" src="07-o-que-nao-fazemos/6.jpg" alt="Slide 6"></div><button class="arr l" aria-label="Anterior">‹</button><button class="arr r" aria-label="Próximo">›</button><span class="cnt">1/6</span></div>
+ <div class="thumbs"><img src="07-o-que-nao-fazemos/1.jpg" class="on"><img src="07-o-que-nao-fazemos/2.jpg" class=""><img src="07-o-que-nao-fazemos/3.jpg" class=""><img src="07-o-que-nao-fazemos/4.jpg" class=""><img src="07-o-que-nao-fazemos/5.jpg" class=""><img src="07-o-que-nao-fazemos/6.jpg" class=""></div>
+ <div class="pb">
+  
+  <div class="meta"><div><span>Pauta</span>Pauta-mãe 2 · O que não fazemos</div><div><span>CTA único</span>Salva e compartilha</div>
+   <div><span>Público</span>Sociedade e potenciais apoiadores</div><div><span>Objetivo</span>Evitar a confusão com abrigo e adoção logo no começo.</div></div>
+  
+  <div class="tabs"><button class="on" data-r="ig">Instagram</button><button data-r="fb">Facebook</button></div>
+  <div class="leg" data-r="ig">O que não fazemos.
+
+A Net do Bem não acolhe crianças e não trabalha com adoção. Apoiamos as casas de acolhimento que já fazem esse trabalho, com formação, gestão e conexão com parceiros. E chegamos para ouvir, sem fiscalizar ninguém.
+
+Salva e compartilha.
+
+#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida</div><div class="leg" data-r="fb" hidden>O que a Fundação Net do Bem não faz.
+
+Não acolhemos crianças e não trabalhamos com adoção. Apoiamos as casas de acolhimento que já fazem esse trabalho, com formação, gestão e conexão com parceiros. Chegamos para ouvir cada casa, sem papel de fiscalização.
+
+Salve e compartilhe.</div>
+  <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20post%2007%20da%20Net%20do%20Bem%20%2803/12%2C%20%22O%20que%20n%C3%A3o%20fazemos%22%29%20e%20est%C3%A1%20APROVADO.">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
+  <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="Olá! Ajuste no post 07 da Net do Bem (03/12, &quot;O que não fazemos&quot;): ">Enviar ajuste no WhatsApp</button></div></div>
+  <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">Carrossel em fundo creme: não acolhemos crianças; não trabalhamos com adoção; não chegamos para fiscalizar; e o que fazemos, formação, apoio de gestão, pesquisa e conexão com parceiros.</p>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+ </div>
+</article>
+<article class="post" id="post-08" data-fase="1" data-status="pendencia">
+ <div class="ph"><div class="n">Post 08 · Sábado, 05/12 · 11h</div>
+  <h3>Por que Sorocaba?</h3>
+  <div class="sub"><span class="pill f1">Fase 1 · Quem somos</span><span class="pill pend">Pendência</span> Carrossel educativo · 5 imagens</div></div>
+ <div class="slider"><div class="track"><img loading="lazy" class="" src="08-por-que-sorocaba/1.jpg" alt="Slide 1"><img loading="lazy" class="" src="08-por-que-sorocaba/2.jpg" alt="Slide 2"><img loading="lazy" class="" src="08-por-que-sorocaba/3.jpg" alt="Slide 3"><img loading="lazy" class="" src="08-por-que-sorocaba/4.jpg" alt="Slide 4"><img loading="lazy" class="" src="08-por-que-sorocaba/5.jpg" alt="Slide 5"></div><button class="arr l" aria-label="Anterior">‹</button><button class="arr r" aria-label="Próximo">›</button><span class="cnt">1/5</span></div>
+ <div class="thumbs"><img src="08-por-que-sorocaba/1.jpg" class="on"><img src="08-por-que-sorocaba/2.jpg" class=""><img src="08-por-que-sorocaba/3.jpg" class=""><img src="08-por-que-sorocaba/4.jpg" class=""><img src="08-por-que-sorocaba/5.jpg" class=""></div>
+ <div class="pb">
+  <div class="alert"><b>Rascunho com pendência</b><ul><li>Confirmar com o André o motivo pessoal da escolha de Sorocaba para o slide 2. O texto atual só usa o que está no CNPJ e no site.</li><li>Confirmar se a pesquisa do portal já recebe casas de fora de Sorocaba (o portal fala em diagnóstico nacional).</li></ul></div>
+  <div class="meta"><div><span>Pauta</span>Fase 1 · Por que Sorocaba?</div><div><span>CTA único</span>Salva e compartilha</div>
+   <div><span>Público</span>Comunidade de Sorocaba</div><div><span>Objetivo</span>Dar raiz local à fundação.</div></div>
+  
+  <div class="tabs"><button class="on" data-r="ig">Instagram</button><button data-r="fb">Facebook</button></div>
+  <div class="leg" data-r="ig">Por que Sorocaba?
+
+A Net do Bem nasceu aqui, e começar perto das casas de acolhimento permite visitar, ouvir e acompanhar cada uma. [Frase do André sobre a escolha da cidade, a confirmar]
+
+Salva e compartilha.
+
+#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida</div><div class="leg" data-r="fb" hidden>Por que a Fundação Net do Bem nasceu em Sorocaba?
+
+Começar perto das casas de acolhimento permite visitar, ouvir e acompanhar cada uma. [Frase do André sobre a escolha da cidade, a confirmar]
+
+Salve e compartilhe.</div>
+  <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20post%2008%20da%20Net%20do%20Bem%20%2805/12%2C%20%22Por%20que%20Sorocaba%3F%22%29%20e%20est%C3%A1%20APROVADO.">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
+  <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="Olá! Ajuste no post 08 da Net do Bem (05/12, &quot;Por que Sorocaba?&quot;): ">Enviar ajuste no WhatsApp</button></div></div>
+  <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">Carrossel em fundo creme sobre a escolha de Sorocaba: a fundação nasceu na cidade, trabalha perto das casas e recebe casas de todo o Brasil no mapeamento.</p>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+ </div>
+</article>
+<article class="post" id="post-09" data-fase="1" data-status="pendencia">
+ <div class="ph"><div class="n">Post 09 · Terça-feira, 08/12 · 18h</div>
+  <h3>Por que criei a Net do Bem</h3>
+  <div class="sub"><span class="pill f1">Fase 1 · Quem somos</span><span class="pill pend">Pendência</span> Reels 30 a 45 s + capa · 1 imagem</div></div>
+ <div class="slider"><div class="track"><img loading="lazy" class="v" src="09-por-que-criei-a-net-do-bem/1.jpg" alt="Slide 1"></div><button class="arr l" aria-label="Anterior">‹</button><button class="arr r" aria-label="Próximo">›</button><span class="cnt">1/1</span></div>
+ <div class="thumbs"><img src="09-por-que-criei-a-net-do-bem/1.jpg" class="on"></div>
+ <div class="pb">
+  <div class="alert"><b>Rascunho com pendência</b><ul><li>Gravar o André olhando para a câmera, fundo real, sem estúdio, até 04/12.</li><li>Se o Reels já tiver sido publicado em 29/11, trocar esta data pelo carrossel de retratos.</li></ul></div>
+  <div class="meta"><div><span>Pauta</span>Fase 1 · Reels do fundador</div><div><span>CTA único</span>Salva e compartilha</div>
+   <div><span>Público</span>Todos os públicos</div><div><span>Objetivo</span>Rosto real e motivação do fundador, em vídeo.</div></div>
+  <div class="info"><b>Roteiro</b><ol><li>0 a 3 s: &quot;Depois de 30 anos construindo empresa, eu quis devolver uma parte disso.&quot;</li><li>Meio: &quot;Conheci casas de acolhimento com equipes incríveis e sem apoio de gestão, de captação, de planejamento. A Net do Bem existe para levar esse apoio.&quot;</li><li>Fecho: &quot;Salva este vídeo e compartilha com quem trabalha com acolhimento.&quot;</li></ol></div>
+  <div class="tabs"><button class="on" data-r="ig">Instagram</button><button data-r="fb">Facebook</button></div>
+  <div class="leg" data-r="ig">Por que criei a Net do Bem.
+
+O André passou mais de 30 anos construindo empresa na tecnologia. Neste vídeo, ele conta por que decidiu colocar essa experiência de gestão a serviço das casas de acolhimento.
+
+Salva e compartilha.
+
+#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida</div><div class="leg" data-r="fb" hidden>Por que criei a Fundação Net do Bem.
+
+O André Facciolli passou mais de 30 anos construindo empresa na tecnologia. Neste vídeo, ele conta por que decidiu colocar essa experiência de gestão a serviço das casas de acolhimento.
+
+Salve e compartilhe.</div>
+  <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20post%2009%20da%20Net%20do%20Bem%20%2808/12%2C%20%22Por%20que%20criei%20a%20Net%20do%20Bem%22%29%20e%20est%C3%A1%20APROVADO.">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
+  <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="Olá! Ajuste no post 09 da Net do Bem (08/12, &quot;Por que criei a Net do Bem&quot;): ">Enviar ajuste no WhatsApp</button></div></div>
+  <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">Capa de Reels com retrato em massinha do André Facciolli e o título Por que criei a Net do Bem.</p>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+ </div>
+</article>
+<article class="post" id="post-10" data-fase="1" data-status="pendencia">
+ <div class="ph"><div class="n">Post 10 · Quinta-feira, 10/12 · 18h</div>
+  <h3>3 perguntas da inauguração</h3>
+  <div class="sub"><span class="pill f1">Fase 1 · Quem somos</span><span class="pill pend">Pendência</span> Carrossel educativo · 5 imagens</div></div>
+ <div class="slider"><div class="track"><img loading="lazy" class="" src="10-3-perguntas-da-inauguracao/1.jpg" alt="Slide 1"><img loading="lazy" class="" src="10-3-perguntas-da-inauguracao/2.jpg" alt="Slide 2"><img loading="lazy" class="" src="10-3-perguntas-da-inauguracao/3.jpg" alt="Slide 3"><img loading="lazy" class="" src="10-3-perguntas-da-inauguracao/4.jpg" alt="Slide 4"><img loading="lazy" class="" src="10-3-perguntas-da-inauguracao/5.jpg" alt="Slide 5"></div><button class="arr l" aria-label="Anterior">‹</button><button class="arr r" aria-label="Próximo">›</button><span class="cnt">1/5</span></div>
+ <div class="thumbs"><img src="10-3-perguntas-da-inauguracao/1.jpg" class="on"><img src="10-3-perguntas-da-inauguracao/2.jpg" class=""><img src="10-3-perguntas-da-inauguracao/3.jpg" class=""><img src="10-3-perguntas-da-inauguracao/4.jpg" class=""><img src="10-3-perguntas-da-inauguracao/5.jpg" class=""></div>
+ <div class="pb">
+  <div class="alert"><b>Rascunho com pendência</b><ul><li>Trocar pelas 3 perguntas que a equipe mais ouviu na inauguração (pedir à Patrícia e à Agda até 05/12).</li><li>Definir a resposta oficial para &quot;como posso ajudar?&quot; antes de publicar.</li></ul></div>
+  <div class="meta"><div><span>Pauta</span>Pauta-mãe 9 · Perguntas que mais recebemos</div><div><span>CTA único</span>Salva e compartilha</div>
+   <div><span>Público</span>Convidados, casas e apoiadores</div><div><span>Objetivo</span>Responder as dúvidas reais que surgiram no evento.</div></div>
+  
+  <div class="tabs"><button class="on" data-r="ig">Instagram</button><button data-r="fb">Facebook</button></div>
+  <div class="leg" data-r="ig">3 perguntas da inauguração.
+
+Separamos as dúvidas que mais ouvimos na quinta-feira, 26/11. A primeira é a mais comum: a Net do Bem não acolhe crianças. Apoiamos as casas e as equipes que fazem esse trabalho.
+
+Salva e compartilha.
+
+#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida</div><div class="leg" data-r="fb" hidden>3 perguntas que ouvimos na inauguração.
+
+Separamos as dúvidas que mais apareceram no dia 26/11. A primeira é a mais comum: a Fundação Net do Bem não acolhe crianças. Apoiamos as casas e as equipes que fazem esse trabalho.
+
+Salve e compartilhe.</div>
+  <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20post%2010%20da%20Net%20do%20Bem%20%2810/12%2C%20%223%20perguntas%20da%20inaugura%C3%A7%C3%A3o%22%29%20e%20est%C3%A1%20APROVADO.">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
+  <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="Olá! Ajuste no post 10 da Net do Bem (10/12, &quot;3 perguntas da inauguração&quot;): ">Enviar ajuste no WhatsApp</button></div></div>
+  <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">Carrossel de perguntas e respostas em fundo creme: vocês acolhem crianças; como uma casa participa; como eu posso ajudar.</p>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+ </div>
+</article>
+<article class="post" id="post-11" data-fase="1" data-status="pronto">
+ <div class="ph"><div class="n">Post 11 · Sábado, 12/12 · 11h</div>
+  <h3>Quem fortalece uma organização alcança muitas histórias</h3>
+  <div class="sub"><span class="pill f1">Fase 1 · Quem somos</span><span class="pill ok">Pronto</span> Card de posicionamento · 1 imagem</div></div>
+ <div class="slider"><div class="track"><img loading="lazy" class="" src="11-quem-fortalece-uma-organizacao-alcanca-muitas-hi/1.jpg" alt="Slide 1"></div><button class="arr l" aria-label="Anterior">‹</button><button class="arr r" aria-label="Próximo">›</button><span class="cnt">1/1</span></div>
+ <div class="thumbs"><img src="11-quem-fortalece-uma-organizacao-alcanca-muitas-hi/1.jpg" class="on"></div>
+ <div class="pb">
+  
+  <div class="meta"><div><span>Pauta</span>Card de posicionamento da semana</div><div><span>CTA único</span>Salva e compartilha</div>
+   <div><span>Público</span>Empresas e potenciais parceiros</div><div><span>Objetivo</span>Reforçar o modelo: apoiar a organização em vez de atender direto.</div></div>
+  
+  <div class="tabs"><button class="on" data-r="ig">Instagram</button><button data-r="fb">Facebook</button></div>
+  <div class="leg" data-r="ig">Quem fortalece uma organização alcança muitas histórias.
+
+Uma casa de acolhimento bem organizada atende crianças e adolescentes por anos, com a mesma equipe ganhando experiência. Por isso a Net do Bem investe na organização e em quem trabalha nela.
+
+Salva e compartilha.
+
+#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida</div><div class="leg" data-r="fb" hidden>Quem fortalece uma organização alcança muitas histórias.
+
+Uma casa de acolhimento bem organizada atende crianças e adolescentes por anos, com a mesma equipe ganhando experiência. Por isso a Fundação Net do Bem investe na organização e em quem trabalha nela.
+
+Salve e compartilhe.</div>
+  <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20post%2011%20da%20Net%20do%20Bem%20%2812/12%2C%20%22Quem%20fortalece%20uma%20organiza%C3%A7%C3%A3o%20alcan%C3%A7a%20muitas%20hist%C3%B3rias%22%29%20e%20est%C3%A1%20APROVADO.">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
+  <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="Olá! Ajuste no post 11 da Net do Bem (12/12, &quot;Quem fortalece uma organização alcança muitas histórias&quot;): ">Enviar ajuste no WhatsApp</button></div></div>
+  <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">Card verde profundo com a frase em branco: Quem fortalece uma organização alcança muitas histórias.</p>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+ </div>
+</article>
+<article class="post" id="post-12" data-fase="2" data-status="pronto">
+ <div class="ph"><div class="n">Post 12 · Terça-feira, 15/12 · 18h</div>
+  <h3>Quem cuida de quem cuida?</h3>
+  <div class="sub"><span class="pill f2">Fase 2 · Quem cuida</span><span class="pill ok">Pronto</span> Carrossel educativo · 5 imagens</div></div>
+ <div class="slider"><div class="track"><img loading="lazy" class="" src="12-quem-cuida-de-quem-cuida/1.jpg" alt="Slide 1"><img loading="lazy" class="" src="12-quem-cuida-de-quem-cuida/2.jpg" alt="Slide 2"><img loading="lazy" class="" src="12-quem-cuida-de-quem-cuida/3.jpg" alt="Slide 3"><img loading="lazy" class="" src="12-quem-cuida-de-quem-cuida/4.jpg" alt="Slide 4"><img loading="lazy" class="" src="12-quem-cuida-de-quem-cuida/5.jpg" alt="Slide 5"></div><button class="arr l" aria-label="Anterior">‹</button><button class="arr r" aria-label="Próximo">›</button><span class="cnt">1/5</span></div>
+ <div class="thumbs"><img src="12-quem-cuida-de-quem-cuida/1.jpg" class="on"><img src="12-quem-cuida-de-quem-cuida/2.jpg" class=""><img src="12-quem-cuida-de-quem-cuida/3.jpg" class=""><img src="12-quem-cuida-de-quem-cuida/4.jpg" class=""><img src="12-quem-cuida-de-quem-cuida/5.jpg" class=""></div>
+ <div class="pb">
+  
+  <div class="meta"><div><span>Pauta</span>Pauta-mãe 3 · Quem cuida de quem cuida</div><div><span>CTA único</span>Comenta: quero ajudar</div>
+   <div><span>Público</span>Equipes de acolhimento e sociedade</div><div><span>Objetivo</span>Abrir o território próprio da marca.</div></div>
+  
+  <div class="tabs"><button class="on" data-r="ig">Instagram</button><button data-r="fb">Facebook</button></div>
+  <div class="leg" data-r="ig">Quem cuida de quem cuida?
+
+Uma casa de acolhimento funciona 24 horas por dia, e sempre tem um educador, uma técnica ou uma coordenadora de plantão. Essas pessoas também precisam de formação, supervisão e uma gestão que funcione. A Net do Bem existe para levar esse apoio.
+
+Comenta: quero ajudar.
+
+#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida</div><div class="leg" data-r="fb" hidden>Quem cuida de quem cuida?
+
+Uma casa de acolhimento funciona 24 horas por dia, e sempre tem um educador, uma técnica ou uma coordenadora de plantão. Essas pessoas também precisam de formação, supervisão e uma gestão que funcione. A Fundação Net do Bem existe para levar esse apoio.
+
+Comente: quero ajudar.</div>
+  <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20post%2012%20da%20Net%20do%20Bem%20%2815/12%2C%20%22Quem%20cuida%20de%20quem%20cuida%3F%22%29%20e%20est%C3%A1%20APROVADO.">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
+  <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="Olá! Ajuste no post 12 da Net do Bem (15/12, &quot;Quem cuida de quem cuida?&quot;): ">Enviar ajuste no WhatsApp</button></div></div>
+  <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">Carrossel em fundo creme: uma casa não fecha; essa equipe também precisa de apoio; a Net do Bem existe para isso; comenta quero ajudar.</p>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+ </div>
+</article>
+<article class="post" id="post-13" data-fase="2" data-status="pronto">
+ <div class="ph"><div class="n">Post 13 · Quinta-feira, 17/12 · 18h</div>
+  <h3>3 necessidades que ninguém vê</h3>
+  <div class="sub"><span class="pill f2">Fase 2 · Quem cuida</span><span class="pill ok">Pronto</span> Carrossel lista · 5 imagens</div></div>
+ <div class="slider"><div class="track"><img loading="lazy" class="" src="13-3-necessidades-que-ninguem-ve/1.jpg" alt="Slide 1"><img loading="lazy" class="" src="13-3-necessidades-que-ninguem-ve/2.jpg" alt="Slide 2"><img loading="lazy" class="" src="13-3-necessidades-que-ninguem-ve/3.jpg" alt="Slide 3"><img loading="lazy" class="" src="13-3-necessidades-que-ninguem-ve/4.jpg" alt="Slide 4"><img loading="lazy" class="" src="13-3-necessidades-que-ninguem-ve/5.jpg" alt="Slide 5"></div><button class="arr l" aria-label="Anterior">‹</button><button class="arr r" aria-label="Próximo">›</button><span class="cnt">1/5</span></div>
+ <div class="thumbs"><img src="13-3-necessidades-que-ninguem-ve/1.jpg" class="on"><img src="13-3-necessidades-que-ninguem-ve/2.jpg" class=""><img src="13-3-necessidades-que-ninguem-ve/3.jpg" class=""><img src="13-3-necessidades-que-ninguem-ve/4.jpg" class=""><img src="13-3-necessidades-que-ninguem-ve/5.jpg" class=""></div>
+ <div class="pb">
+  
+  <div class="meta"><div><span>Pauta</span>Pauta-mãe 4 · 3 coisas que uma casa precisa</div><div><span>CTA único</span>Comenta: quero ajudar</div>
+   <div><span>Público</span>Empresas e sociedade</div><div><span>Objetivo</span>Mostrar o trabalho invisível que sustenta o cuidado.</div></div>
+  
+  <div class="tabs"><button class="on" data-r="ig">Instagram</button><button data-r="fb">Facebook</button></div>
+  <div class="leg" data-r="ig">3 necessidades que ninguém vê.
+
+Quando se fala de casa de acolhimento, quase sempre a conversa é sobre doação de itens. O dia a dia também depende de gestão, de uma equipe com formação e de uma rede de apoio por perto.
+
+Comenta: quero ajudar.
+
+#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida</div><div class="leg" data-r="fb" hidden>3 necessidades que ninguém vê numa casa de acolhimento.
+
+Quando se fala de casa de acolhimento, quase sempre a conversa é sobre doação de itens. O dia a dia também depende de gestão, de uma equipe com formação e de uma rede de apoio por perto.
+
+Comente: quero ajudar.</div>
+  <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20post%2013%20da%20Net%20do%20Bem%20%2817/12%2C%20%223%20necessidades%20que%20ningu%C3%A9m%20v%C3%AA%22%29%20e%20est%C3%A1%20APROVADO.">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
+  <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="Olá! Ajuste no post 13 da Net do Bem (17/12, &quot;3 necessidades que ninguém vê&quot;): ">Enviar ajuste no WhatsApp</button></div></div>
+  <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">Carrossel em fundo creme com três itens numerados: gestão e planejamento, formação da equipe e rede de apoio.</p>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+ </div>
+</article>
+<article class="post" id="post-14" data-fase="2" data-status="pronto">
+ <div class="ph"><div class="n">Post 14 · Sábado, 19/12 · 11h</div>
+  <h3>Por trás de cada casa, tem gente</h3>
+  <div class="sub"><span class="pill f2">Fase 2 · Quem cuida</span><span class="pill ok">Pronto</span> Card de posicionamento · 1 imagem</div></div>
+ <div class="slider"><div class="track"><img loading="lazy" class="" src="14-por-tras-de-cada-casa-tem-gente/1.jpg" alt="Slide 1"></div><button class="arr l" aria-label="Anterior">‹</button><button class="arr r" aria-label="Próximo">›</button><span class="cnt">1/1</span></div>
+ <div class="thumbs"><img src="14-por-tras-de-cada-casa-tem-gente/1.jpg" class="on"></div>
+ <div class="pb">
+  
+  <div class="meta"><div><span>Pauta</span>Card de posicionamento da semana</div><div><span>CTA único</span>Comenta: quero ajudar</div>
+   <div><span>Público</span>Todos os públicos</div><div><span>Objetivo</span>Fixar o território quem cuida.</div></div>
+  
+  <div class="tabs"><button class="on" data-r="ig">Instagram</button><button data-r="fb">Facebook</button></div>
+  <div class="leg" data-r="ig">Por trás de cada casa, tem gente que precisa de apoio também.
+
+Educadores, cozinheiras, psicólogas, assistentes sociais e coordenadores fazem o acolhimento acontecer. É para essas pessoas que a Net do Bem trabalha.
+
+Comenta: quero ajudar.
+
+#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida</div><div class="leg" data-r="fb" hidden>Por trás de cada casa, tem gente que precisa de apoio também.
+
+Educadores, cozinheiras, psicólogas, assistentes sociais e coordenadores fazem o acolhimento acontecer. É para essas pessoas que a Fundação Net do Bem trabalha.
+
+Comente: quero ajudar.</div>
+  <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20post%2014%20da%20Net%20do%20Bem%20%2819/12%2C%20%22Por%20tr%C3%A1s%20de%20cada%20casa%2C%20tem%20gente%22%29%20e%20est%C3%A1%20APROVADO.">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
+  <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="Olá! Ajuste no post 14 da Net do Bem (19/12, &quot;Por trás de cada casa, tem gente&quot;): ">Enviar ajuste no WhatsApp</button></div></div>
+  <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">Card verde profundo com a frase em branco: Por trás de cada casa, tem gente que precisa de apoio também.</p>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+ </div>
+</article>
+<article class="post" id="post-15" data-fase="2" data-status="pendencia">
+ <div class="ph"><div class="n">Post 15 · Terça-feira, 22/12 · 18h</div>
+  <h3>Dá para cuidar sem se anular?</h3>
+  <div class="sub"><span class="pill f2">Fase 2 · Quem cuida</span><span class="pill pend">Pendência</span> Carrossel educativo · 5 imagens</div></div>
+ <div class="slider"><div class="track"><img loading="lazy" class="" src="15-da-para-cuidar-sem-se-anular/1.jpg" alt="Slide 1"><img loading="lazy" class="" src="15-da-para-cuidar-sem-se-anular/2.jpg" alt="Slide 2"><img loading="lazy" class="" src="15-da-para-cuidar-sem-se-anular/3.jpg" alt="Slide 3"><img loading="lazy" class="" src="15-da-para-cuidar-sem-se-anular/4.jpg" alt="Slide 4"><img loading="lazy" class="" src="15-da-para-cuidar-sem-se-anular/5.jpg" alt="Slide 5"></div><button class="arr l" aria-label="Anterior">‹</button><button class="arr r" aria-label="Próximo">›</button><span class="cnt">1/5</span></div>
+ <div class="thumbs"><img src="15-da-para-cuidar-sem-se-anular/1.jpg" class="on"><img src="15-da-para-cuidar-sem-se-anular/2.jpg" class=""><img src="15-da-para-cuidar-sem-se-anular/3.jpg" class=""><img src="15-da-para-cuidar-sem-se-anular/4.jpg" class=""><img src="15-da-para-cuidar-sem-se-anular/5.jpg" class=""></div>
+ <div class="pb">
+  <div class="alert"><b>Rascunho com pendência</b><ul><li>Revisão técnica da Patrícia (psicóloga) antes de publicar.</li></ul></div>
+  <div class="meta"><div><span>Pauta</span>Fase 2 · Cuidar sem se anular</div><div><span>CTA único</span>Compartilha com quem cuida de alguém</div>
+   <div><span>Público</span>Equipes de acolhimento e cuidadores em geral</div><div><span>Objetivo</span>Conteúdo útil para cuidadores no fim de ano.</div></div>
+  
+  <div class="tabs"><button class="on" data-r="ig">Instagram</button><button data-r="fb">Facebook</button></div>
+  <div class="leg" data-r="ig">Dá para cuidar sem se anular?
+
+Quem trabalha numa casa de acolhimento passa o dia atento às necessidades dos outros. Escala organizada, folga respeitada e supervisão ajudam essa pessoa a continuar cuidando bem, inclusive de si.
+
+Compartilha com quem cuida de alguém.
+
+#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida</div><div class="leg" data-r="fb" hidden>Dá para cuidar sem se anular?
+
+Quem trabalha numa casa de acolhimento passa o dia atento às necessidades dos outros. Escala organizada, folga respeitada e supervisão ajudam essa pessoa a continuar cuidando bem, inclusive de si.
+
+Compartilhe com quem cuida de alguém.</div>
+  <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20post%2015%20da%20Net%20do%20Bem%20%2822/12%2C%20%22D%C3%A1%20para%20cuidar%20sem%20se%20anular%3F%22%29%20e%20est%C3%A1%20APROVADO.">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
+  <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="Olá! Ajuste no post 15 da Net do Bem (22/12, &quot;Dá para cuidar sem se anular?&quot;): ">Enviar ajuste no WhatsApp</button></div></div>
+  <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">Carrossel em fundo creme: cansaço também é sinal; pausa faz parte do trabalho; ninguém cuida bem sozinho.</p>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+ </div>
+</article>
+<article class="post" id="post-16" data-fase="2" data-status="pendencia">
+ <div class="ph"><div class="n">Post 16 · Terça-feira, 29/12 · 18h</div>
+  <h3>O que eu queria que soubessem</h3>
+  <div class="sub"><span class="pill f2">Fase 2 · Quem cuida</span><span class="pill pend">Pendência</span> Foto real com faixa ou Reels · 3 imagens</div></div>
+ <div class="slider"><div class="track"><img loading="lazy" class="" src="16-o-que-eu-queria-que-soubessem/1.jpg" alt="Slide 1"><img loading="lazy" class="" src="16-o-que-eu-queria-que-soubessem/2.jpg" alt="Slide 2"><img loading="lazy" class="" src="16-o-que-eu-queria-que-soubessem/3.jpg" alt="Slide 3"></div><button class="arr l" aria-label="Anterior">‹</button><button class="arr r" aria-label="Próximo">›</button><span class="cnt">1/3</span></div>
+ <div class="thumbs"><img src="16-o-que-eu-queria-que-soubessem/1.jpg" class="on"><img src="16-o-que-eu-queria-que-soubessem/2.jpg" class=""><img src="16-o-que-eu-queria-que-soubessem/3.jpg" class=""></div>
+ <div class="pb">
+  <div class="alert"><b>Rascunho com pendência</b><ul><li>Entrevista com um cuidador ou educador adulto de casa parceira, com termo de uso de imagem assinado.</li><li>Foto só do adulto, sem crianças, sem fachada, placa ou ambiente que identifique a casa.</li><li>A frase do slide e da legenda deve ser fala real da pessoa, sem edição de sentido.</li></ul></div>
+  <div class="meta"><div><span>Pauta</span>Pauta-mãe 8 · Depoimento de cuidador</div><div><span>CTA único</span>Compartilha com quem cuida de alguém</div>
+   <div><span>Público</span>Sociedade e empresas</div><div><span>Objetivo</span>Primeira voz de quem cuida no perfil.</div></div>
+  <div class="info"><b>Roteiro</b><ol><li>Pergunta 1: O que você queria que mais pessoas soubessem sobre o seu trabalho?</li><li>Pergunta 2: Que tipo de apoio faria diferença na sua rotina?</li><li>Pergunta 3: O que te faz continuar?</li></ol></div>
+  <div class="tabs"><button class="on" data-r="ig">Instagram</button><button data-r="fb">Facebook</button></div>
+  <div class="leg" data-r="ig">O que eu queria que soubessem.
+
+[Nome] trabalha numa casa de acolhimento e topou contar como é a rotina de quem cuida. [Trecho real do depoimento, até 3 linhas]
+
+Compartilha com quem cuida de alguém.
+
+#FundacaoNetDoBem #Sorocaba #Acolhimento #QuemCuidaDeQuemCuida</div><div class="leg" data-r="fb" hidden>O que eu queria que soubessem.
+
+[Nome] trabalha numa casa de acolhimento e topou contar como é a rotina de quem cuida. [Trecho real do depoimento, até 3 linhas]
+
+Compartilhe com quem cuida de alguém.</div>
+  <div class="row"><button class="btn b-copy">Copiar legenda</button><a class="btn b-ok" target="_blank" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Revisei%20o%20post%2016%20da%20Net%20do%20Bem%20%2829/12%2C%20%22O%20que%20eu%20queria%20que%20soubessem%22%29%20e%20est%C3%A1%20APROVADO.">Aprovar no WhatsApp</a><button class="btn b-adj">Pedir ajuste</button></div>
+  <div class="adj"><textarea placeholder="Descreva o ajuste (texto, imagem, data)"></textarea><div class="row"><button class="btn b-ok b-send" data-pre="Olá! Ajuste no post 16 da Net do Bem (29/12, &quot;O que eu queria que soubessem&quot;): ">Enviar ajuste no WhatsApp</button></div></div>
+  <details><summary>Texto alternativo e checklist de segurança</summary><p style="margin:8px 0">Retrato de um adulto que trabalha em casa de acolhimento, com faixa verde e a frase O que eu queria que soubessem. Não aparecem crianças.</p>
+   <p>1 ideia · 1 CTA · gancho até 6 palavras · sem criança identificável · sem endereço ou rotina · sem cópia de perfil de referência · sem Imposto de Renda · rosto de adulto só com autorização · legenda revisada por 1 pessoa da fundação.</p></details>
+ </div>
+</article></section><section><h2 class="sec-t">Posts de reserva</h2><div class="box res"><ul><li><b>Bastidor de formação de quem cuida</b> (Fase 2). Assim que a primeira formação acontecer. Depende de uma formação real com registro e autorização.</li><li><b>Casa de acolhimento? Responda ao mapeamento</b> (Fase 1 ou 2). Quando a diretoria aprovar. Precisa de um CTA novo (&quot;Acesse o portal na bio&quot;), que não está na lista da seção 11 do briefing.</li></ul></div></section>
+<p class="foot">Fundação Net do Bem · @fundacao.netdobem · Conteúdo preparado pela Substrato Digital</p></main>
+<div class="toast"></div><script>
+document.querySelectorAll('.slider').forEach(s=>{const t=s.querySelector('.track'),im=[...t.children],th=[...s.parentElement.querySelectorAll('.thumbs img')],c=s.querySelector('.cnt');
+const go=i=>{i=Math.max(0,Math.min(im.length-1,i));t.scrollTo({left:im[i].offsetLeft,behavior:'smooth'})};
+const cur=()=>Math.round(t.scrollLeft/t.clientWidth);
+t.addEventListener('scroll',()=>{const i=cur();c.textContent=(i+1)+'/'+im.length;th.forEach((x,k)=>x.classList.toggle('on',k==i))});
+s.querySelector('.l').onclick=()=>go(cur()-1);s.querySelector('.r').onclick=()=>go(cur()+1);th.forEach((x,k)=>x.onclick=()=>go(k));});
+document.querySelectorAll('.tabs').forEach(tb=>{const bs=tb.querySelectorAll('button');bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>x.classList.remove('on'));b.classList.add('on');
+const p=tb.parentElement;p.querySelectorAll('.leg').forEach(l=>l.hidden=l.dataset.r!=b.dataset.r)})});
+function toast(m){const t=document.querySelector('.toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1600)}
+document.querySelectorAll('.b-copy').forEach(b=>b.onclick=()=>{const l=b.closest('.pb').querySelector('.leg:not([hidden])');navigator.clipboard.writeText(l.textContent).then(()=>toast('Legenda copiada'))});
+document.querySelectorAll('.b-adj').forEach(b=>b.onclick=()=>b.closest('.pb').querySelector('.adj').classList.toggle('on'));
+document.querySelectorAll('.b-send').forEach(b=>b.onclick=()=>{const p=b.closest('.pb'),t=p.querySelector('textarea').value.trim();if(!t){toast('Escreva o ajuste');return}
+window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(b.dataset.pre+t),'_blank')});
+document.querySelectorAll('.filtros button').forEach(b=>b.onclick=()=>{const g=b.dataset.g;document.querySelectorAll('.filtros button[data-g="'+g+'"]').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+const f={};document.querySelectorAll('.filtros button.on').forEach(x=>f[x.dataset.g]=x.dataset.v);
+document.querySelectorAll('.post').forEach(p=>{p.hidden=!Object.entries(f).every(([k,v])=>v=='*'||p.dataset[k]==v)})});
+</script></body></html>
