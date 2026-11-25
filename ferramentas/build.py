@@ -128,8 +128,8 @@ def semana_de(d):
 
 def imgs(p):
     d = post_dir(p)
-    feed = sorted([f for f in d.glob("[0-9]*.jpg")], key=lambda f: int(f.stem))
-    st = sorted(d.glob("story-*.jpg"))
+    feed = sorted(d.glob("card-*.png")) + sorted(d.glob("capa-reels.png"))
+    st = sorted(d.glob("story-*.png"))
     return [f"{d.name}/{f.name}" for f in feed], [f"{d.name}/{f.name}" for f in st]
 
 

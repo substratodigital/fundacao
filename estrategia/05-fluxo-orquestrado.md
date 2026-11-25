@@ -41,8 +41,9 @@ git add -A; git commit -m "Dezembro: ajustes da revisão"; git push
 
 ```
 novembro-dezembro/12-quem-cuida-de-quem-cuida/
-  1.jpg ... 5.jpg     artes do feed, na ordem
-  story-1.jpg ...     stories, quando houver
+  card-01.png ...     artes finais do feed, PNG 1080x1350, na ordem do carrossel
+  capa-reels.png      capa do Reels, PNG 1080x1920 (quando houver)
+  story-01.png ...    stories, PNG 1080x1920 (quando houver)
   instagram.txt       legenda com hashtags
   facebook.txt        legenda da página
   alt-text.txt        texto alternativo

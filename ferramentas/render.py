@@ -297,7 +297,7 @@ def main(ids):
     TMP.mkdir(exist_ok=True)
     with sync_playwright() as pw:
         br = pw.chromium.launch()
-        ctx = br.new_context(viewport={"width": 1080, "height": 1350}, device_scale_factor=1)
+        ctx = br.new_context(viewport={"width": 1080, "height": 1350}, device_scale_factor=2)
         pg = ctx.new_page()
         for p in POSTS:
             if ids and p["id"] not in ids:
@@ -318,8 +318,13 @@ def main(ids):
                 pg.wait_for_timeout(120)
                 png = TMP / "shot.png"
                 pg.screenshot(path=str(png))
-                name = f"{k}.jpg" if k <= n else f"story-{k - n}.jpg"
-                Image.open(png).convert("RGB").save(d / name, quality=92)
+                vert = h == 1920
+                if k <= n:
+                    name = "capa-reels.png" if vert else f"card-{k:02d}.png"
+                else:
+                    name = f"story-{k - n:02d}.png"
+                # renderiza em 2x e reduz para o tamanho do Meta (1080x1350 feed, 1080x1920 stories/Reels)
+                Image.open(png).convert("RGB").resize((1080, h), Image.LANCZOS).save(d / name, optimize=True)
             (d / "instagram.txt").write_text(legenda_txt(p, "ig"), encoding="utf-8")
             (d / "facebook.txt").write_text(legenda_txt(p, "fb"), encoding="utf-8")
             (d / "alt-text.txt").write_text(p["alt"] + "\n", encoding="utf-8")
