@@ -46,3 +46,15 @@ As capas dos carrosséis e as artes limpas usam cenas em massinha geradas no Mag
 - Slides que pedem foto real (bastidores e depoimento) seguem com foto real; a massinha não substitui pessoa real.
 
 Custo no Magnific nesta entrega: 20 imagens, cerca de 1.300 créditos do limite de 5.000.
+
+## V.1 · Letra manuscrita e diagramação (25/11)
+
+- **Letra manuscrita:** Caveat (Google Fonts, licença OFL) em coral para a palavra de destaque acima do título, com um traço menta embaixo. Nos cards verdes, em menta. Conversa com as palavras manuscritas que o perfil já usa ("essência", "Fundação?").
+- **Títulos e texto:** Manrope ExtraBold e Montserrat, as fontes do site.
+- **Formas orgânicas:** manchas verde-claras nos cantos dos cards creme, como no perfil atual.
+- **Card da equipe (padrão do post da Patrícia):** foto em polaroide levemente inclinada, dois papéis com notas manuscritas ("Sobre mim" e "O que faço"), nome e cargo embaixo.
+- **Infográfico da triangulação:** o coração da marca no centro, com casa de acolhimento, poder público e apoiadores nos vértices e a Net do Bem no meio.
+- **Doação:** tabela de cinco linhas com rótulos manuscritos (para que, para quem, quanto, como, prazo).
+- **Carrossel com no máximo 3 cards.**
+
+Custo no Magnific até a V.1: 34 imagens, cerca de 2.200 dos 5.000 créditos.

@@ -19,7 +19,7 @@ TOOLS = ROOT / "ferramentas"
 TMP = TOOLS / "_tmp"
 
 C = dict(verde="#2F6F4C", marca="#66AA83", menta="#5BDEA8", creme="#FAF6EF", tinta="#1F2330",
-         coral="#DE6F5B", muted="#5B6B63", linha="#E4DED1")
+         coral="#DE6F5B", azul="#54A2D3", amarelo="#DED05B", muted="#5B6B63", linha="#E4DED1")
 
 
 def slug(s):
@@ -40,6 +40,7 @@ def esc(s):
 
 
 CSS = f"""
+@import url(https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=block);
 @font-face{{font-family:Manrope;font-weight:700;src:url(../fonts/manrope-latin-700-normal.woff2)}}
 @font-face{{font-family:Manrope;font-weight:800;src:url(../fonts/manrope-latin-800-normal.woff2)}}
 @font-face{{font-family:Montserrat;font-weight:400;src:url(../fonts/montserrat-latin-400-normal.woff2)}}
@@ -109,8 +110,50 @@ body{{font-family:Montserrat,sans-serif;color:{C['tinta']};-webkit-font-smoothin
 .ilustra .tx{{position:absolute;left:92px;right:92px;top:190px}}
 .ilustra .kicker{{margin-bottom:30px}}
 .ilustra .t{{color:#2F6F4C;max-width:880px}}
+.mao{{font-family:Caveat,cursive;font-weight:700;color:{C['coral']};line-height:.9;display:inline-block;transform:rotate(-3deg);transform-origin:left bottom}}
+.mao.sm{{font-size:64px}}.mao.md{{font-size:92px}}
+.swoosh{{display:block;width:260px;height:26px;margin-top:-4px}}
+.blob{{position:absolute;background:#E2F0E6;border-radius:58% 42% 63% 37% / 46% 55% 45% 54%}}
+.verde .mao{{color:{C['menta']}}}
+.tri .tt{{position:absolute;left:92px;right:92px;top:170px}}
+.tri .t{{font-size:88px;color:{C['verde']}}}
+.tri .hz{{position:absolute;left:250px;top:560px;width:580px}}
+.lbl{{position:absolute;background:#fff;border:3px solid {C['linha']};border-radius:22px;padding:16px 24px;font-family:Manrope;font-weight:800;font-size:34px;color:{C['tinta']};line-height:1.1;box-shadow:0 10px 30px rgba(47,111,76,.10);display:flex;gap:14px;align-items:center}}
+.lbl i{{width:22px;height:22px;border-radius:50%;flex:none}}
+.lbl.c{{background:{C['verde']};color:#fff;border-color:{C['verde']};font-size:40px}}
+.pap .t,.doa .t{{font-size:76px;color:{C['verde']};margin-bottom:34px}}
+.pap .row{{display:flex;gap:26px;padding:24px 0;border-top:3px solid {C['linha']}}}
+.pap .row i{{width:26px;height:26px;border-radius:50%;flex:none;margin-top:8px}}
+.pap .row b{{display:block;font-family:Manrope;font-weight:800;font-size:38px;color:{C['verde']}}}
+.pap .row span{{display:block;font-size:31px;line-height:1.38;margin-top:6px}}
+.doa .row{{display:flex;gap:24px;align-items:baseline;padding:20px 0;border-top:3px solid {C['linha']}}}
+.doa .row .mao{{font-size:56px;width:250px;flex:none;transform:none}}
+.doa .row span{{font-size:34px;line-height:1.35}}
+.nota{{background:#EAF4EC}}
+.pola{{position:absolute;left:84px;top:180px;width:480px;height:600px;background:#fff;padding:22px 22px 90px;transform:rotate(-3deg);box-shadow:0 18px 40px rgba(31,35,48,.15)}}
+.pola .ph2{{width:100%;height:100%;background:{C['marca']} center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:30px;text-align:center}}
+.pola .cap{{position:absolute;left:0;right:0;bottom:22px;text-align:center;font-family:Caveat;font-weight:700;font-size:46px;color:{C['verde']}}}
+.paper{{position:absolute;background:#FFFDF6;padding:30px 34px;box-shadow:0 14px 34px rgba(31,35,48,.12);border-radius:6px}}
+.paper h4{{font-family:Caveat;font-weight:700;font-size:62px;color:{C['coral']};line-height:1;margin-bottom:10px}}
+.paper li{{font-family:Caveat;font-weight:600;font-size:40px;line-height:1.15;color:{C['tinta']};list-style:none;padding-left:30px;position:relative;margin:8px 0}}
+.paper li:before{{content:"";position:absolute;left:0;top:16px;width:16px;height:16px;border-radius:50%;background:{C['menta']}}}
+.nota .who{{position:absolute;left:92px;bottom:140px}}
+.nota .who .n{{font-family:Manrope;font-weight:800;font-size:58px;max-width:470px;line-height:1.05;color:{C['verde']};letter-spacing:-.02em}}
+.nota .who .p{{font-weight:600;font-size:28px;letter-spacing:.14em;text-transform:uppercase;color:{C['verde']};margin-top:8px}}
 .tag{{position:absolute;top:150px;left:50%;transform:translateX(-50%);background:{C['coral']};color:#fff;font-weight:600;font-size:30px;letter-spacing:.12em;padding:14px 30px;border-radius:999px;text-transform:uppercase}}
 """
+
+
+SWOOSH = '<svg class="swoosh" viewBox="0 0 260 26"><path d="M4 18 C 70 4, 150 4, 256 14" fill="none" stroke="#5BDEA8" stroke-width="7" stroke-linecap="round"/></svg>'
+
+
+def blobs():
+    return ('<div class="blob" style="width:520px;height:420px;left:-200px;bottom:-170px"></div>'
+            '<div class="blob" style="width:380px;height:320px;right:-150px;top:-120px"></div>')
+
+
+def mao(s, size="md"):
+    return (f'<div style="display:block"><div class="mao {size}">{esc(s["mao"])}</div>' + SWOOSH + '</div>') if s.get("mao") else ""
 
 
 def chrome(theme, i, n, logo=True):
@@ -135,7 +178,7 @@ def slide_html(s, i, n):
         im = Image.open(TOOLS / "massinha" / s["img"]).convert("RGB")
         bgc = "rgb(%d,%d,%d)" % im.getpixel((10, 10))
         size = f'{s["escala"]}% auto' if s.get("escala") else "cover"
-        return "ilustra", f'<div class="bg" style="background-color:{bgc};background-size:{size};background-image:url({u("massinha/" + s["img"])})"></div>' + top + f'<div class="tx"><div class="kicker">{esc(s.get("kicker",""))}</div><div class="h t" style="font-size:{fs}px">{esc(s["titulo"])}</div></div>'
+        return "ilustra", f'<div class="bg" style="background-color:{bgc};background-size:{size};background-image:url({u("massinha/" + s["img"])})"></div>' + top + f'<div class="tx"><div class="kicker">{esc(s.get("kicker",""))}</div>{mao(s)}<div class="h t" style="font-size:{fs}px;margin-top:10px">{esc(s["titulo"])}</div></div>'
     if t == "capa":
         top, foot = chrome("creme", i, n)
         sub = f'<div class="sub">{esc(s.get("sub"))}</div>' if s.get("sub") else ""
@@ -145,22 +188,51 @@ def slide_html(s, i, n):
         top, foot = chrome("creme", i, n)
         num = f'<div class="num">{esc(s["num"])}</div>' if s.get("num") else ""
         body = f'<div class="mid">{num}<div class="h t">{esc(s["titulo"])}</div><div class="b">{esc(s["corpo"])}</div></div>'
-        return "creme texto", top + body + foot
+        return "creme texto", blobs() + top + body + foot
     if t == "lista":
         top, foot = chrome("creme", i, n)
         num = f'<div class="num">{esc(s["num"])}</div>' if s.get("num") else ""
         li = "".join(f"<li><b></b>{esc(x)}</li>" for x in s["itens"])
-        return "creme lista", top + f'<div class="mid">{num}<div class="h t">{esc(s["titulo"])}</div><ul>{li}</ul></div>' + foot
+        return "creme lista", blobs() + top + f'<div class="mid">{num}<div class="h t">{esc(s["titulo"])}</div><ul>{li}</ul></div>' + foot
     if t == "pergunta":
         top, foot = chrome("creme", i, n)
         return "creme", top + f'<div class="mid"><div class="num">{esc(s["num"])}</div><div class="q">{esc(s["pergunta"])}</div><div class="a">{esc(s["resposta"])}</div></div>' + foot
     if t == "card":
         top, foot = chrome("verde", i, n, logo=False)
         logo = f'<img src="{u("brand/NET-DO-BEM-WHITE-HORIZONTAL.svg")}" style="position:absolute;left:92px;bottom:92px;height:70px">'
-        return "verde card", heart("verde", 900, -260, -160) + f'<div class="mid"><div class="mark"></div><div class="h t">{esc(s["frase"])}</div></div>' + logo
+        return "verde card", heart("verde", 900, -260, -160) + f'<div class="mid">{(mao(s, "sm") + "<div style=height:30px></div>") if s.get("mao") else "<div class=mark></div>"}<div class="h t">{esc(s["frase"])}</div></div>' + logo
     if t == "cta":
         top, foot = chrome("creme", i, n)
-        return "creme cta", top + heart("creme", 700, -200, -180) + f'<div class="mid"><div class="h t">O próximo passo é seu</div><div class="pill">{esc(s["texto"])}</div><div class="b">{esc(s.get("apoio",""))}</div></div>' + foot
+        return "creme cta", blobs() + top + heart("creme", 700, -200, -180) + f'<div class="mid"><div class="mao sm" style="margin-bottom:18px">e agora?</div><div class="h t">{esc(s.get("titulo") or "O próximo passo é seu")}</div><div class="pill">{esc(s["texto"])}</div><div class="b">{esc(s.get("apoio",""))}</div></div>' + foot
+    if t == "triangulo":
+        top, foot = chrome("creme", i, n)
+        L = (f'<img class="hz" src="{u("brand/icon_green.svg")}">'
+             f'<div class="lbl" style="left:70px;top:520px"><i style="background:{C["menta"]}"></i>Casa de<br>acolhimento</div>'
+             f'<div class="lbl" style="right:70px;top:520px"><i style="background:{C["azul"]}"></i>Poder<br>público</div>'
+             f'<div class="lbl" style="left:50%;transform:translateX(-50%);top:1095px;white-space:nowrap"><i style="background:{C["amarelo"]}"></i>Apoiadores e empresas</div>'
+             f'<div class="lbl c" style="left:50%;transform:translateX(-50%);top:770px;white-space:nowrap">Net do Bem</div>')
+        return "creme tri", blobs() + top + f'<div class="tt">{mao(s, "sm")}<div class="h t" style="margin-top:8px">{esc(s["titulo"])}</div></div>' + L + foot
+    if t == "papeis":
+        top, foot = chrome("creme", i, n)
+        cores = [C["menta"], C["azul"], C["amarelo"], C["verde"]]
+        rows = "".join(f'<div class="row"><i style="background:{cores[k]}"></i><div><b>{esc(a)}</b><span>{esc(b)}</span></div></div>' for k, (a, b) in enumerate(s["itens"]))
+        return "creme pap", blobs() + top + f'<div class="mid" style="top:54%"><div class="h t">{esc(s["titulo"])}</div>{rows}</div>' + foot
+    if t == "doacao":
+        top, foot = chrome("creme", i, n)
+        rows = "".join(f'<div class="row"><div class="mao">{esc(a)}</div><span>{esc(b)}</span></div>' for a, b in s["itens"])
+        return "creme doa", blobs() + top + f'<div class="mid" style="top:54%"><div class="h t">{esc(s["titulo"])}</div>{rows}</div>' + foot
+    if t == "nota":
+        top, foot = chrome("creme", i, n)
+        if s.get("img"):
+            ph = f'<div class="ph2" style="background-image:url({u("fotos/" + s["img"])})"></div>'
+        else:
+            ph = '<div class="ph2">FOTO REAL<br>a enviar</div>'
+        sob = "".join(f"<li>{esc(x)}</li>" for x in s["sobre"])
+        faz = "".join(f"<li>{esc(x)}</li>" for x in s["faz"])
+        return "nota", (blobs() + top + f'<div class="pola">{ph}<div class="cap">{esc(s["nome"].split()[0])}</div></div>'
+                        + f'<div class="paper" style="left:600px;top:200px;width:410px;transform:rotate(2.5deg)"><h4>Sobre mim</h4><ul>{sob}</ul></div>'
+                        + f'<div class="paper" style="left:610px;top:700px;width:400px;transform:rotate(-2deg)"><h4>O que faço</h4><ul>{faz}</ul></div>'
+                        + f'<div class="who"><div class="n">{esc(s["nome"])}</div><div class="p">{esc(s["papel"])}</div></div>' + foot)
     if t == "foto":
         if s.get("img"):
             cls = "img contain" if s.get("fit") == "contain" else "img"

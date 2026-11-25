@@ -1,11 +1,11 @@
 # 15 · 22/12 (Terça-feira) · Dá para cuidar sem se anular?
 
-- Fase: Fase 2 · Quem cuida
-- Pauta: Fase 2 · Cuidar sem se anular
-- Formato: Carrossel educativo
+- Fase: Etapa 3 · Natal e continuidade
+- Pauta: Cuidar sem se anular
+- Formato: Carrossel 3 cards
 - Horário sugerido: 18h
-- Público: Equipes de acolhimento e cuidadores em geral
-- Objetivo: Conteúdo útil para cuidadores no fim de ano.
+- Público: Equipes de acolhimento e cuidadores
+- Objetivo: Conteúdo útil para quem trabalha nas casas no fim de ano.
 - CTA único: Compartilha com quem cuida de alguém
 - Prova: Conteúdo educativo com revisão de profissional habilitada.
 - Status: RASCUNHO COM PENDÊNCIA

@@ -14,7 +14,7 @@ from render import post_dir, ROOT
 
 MESES = {"novembro-dezembro": ("Novembro e Dezembro", 12)}
 INTRO = {
-    "novembro-dezembro": "Do fim de novembro ao fim de dezembro: a inauguração em 26/11 (Fase 0), quem somos (Fase 1) e quem cuida (Fase 2). Dezesseis posts para a Net do Bem existir, se explicar em 10 segundos e abrir o nosso território: quem cuida de quem cuida.",
+    "novembro-dezembro": "V.1, revisada em 25/11. A trilha do pré-briefing em 18 posts: inauguração (25 a 30/11), pesquisa de mapeamento e Dia de Doar (dezembro), Natal e continuidade para 2027. Carrosséis com no máximo 3 cards e nada que repita o que o perfil já publicou.",
 }
 e = html.escape
 WA = "https://api.whatsapp.com/send?text="
@@ -194,8 +194,8 @@ def month_page(mes):
 <img src="{feed[0]}" alt=""><div class="inf"><div><span class="pill f{p['fase']}">{e(p['fase_nome'].split(' · ')[1])}</span>{st}</div>
 <div class="tt">{e(p['titulo'])}</div><div class="mt">{e(p['formato'])} · CTA: {e(p['cta'])}</div></div></a>'''
     fases = sorted({p["fase"] for p in ps})
-    filt = '<div class="filtros"><button class="on" data-g="fase" data-v="*">Todas as fases</button>' + \
-        "".join(f'<button data-g="fase" data-v="{f}">Fase {f}</button>' for f in fases) + \
+    filt = '<div class="filtros"><button class="on" data-g="fase" data-v="*">Todas as etapas</button>' + \
+        "".join(f'<button data-g="fase" data-v="{f}">{e(next(p["fase_nome"] for p in ps if p["fase"]==f).split(" · ")[1])}</button>' for f in fases) + \
         '<button class="on" data-g="status" data-v="*">Todos</button><button data-g="status" data-v="pronto">Prontos</button><button data-g="status" data-v="pendencia">Com pendência</button></div>'
     reserva = ""
     if mes == "novembro-dezembro":
@@ -213,7 +213,7 @@ def month_page(mes):
 <div class="badges"><span class="badge">{len(ps)} posts</span><span class="badge">{prontos} prontos</span><span class="badge">{len(ps)-prontos} com pendência</span><span class="badge">Instagram + Facebook</span></div></div></header>
 <nav class="nav"><a href="../index.html">← Todos os meses</a><a href="#calendario">Calendário</a><a href="#posts">Posts ({len(ps)})</a><a class="wa" target="_blank" href="{aprov}">Aprovar mês no WhatsApp</a></nav>
 <main class="wrap">
-<section id="calendario"><h2 class="sec-t">Calendário sugerido</h2><p class="sec-p">Fase 0: um post por dia de 26 a 30/11. Dezembro: terça e quinta às 18h, sábado às 11h. Recesso de 23 a 28/12.</p>
+<section id="calendario"><h2 class="sec-t">Calendário sugerido</h2><p class="sec-p">Inauguração: um post por dia de 25 a 30/11. Dezembro: 2 a 3 posts por semana, com as datas especiais (Dia de Doar, Voluntário, Direitos Humanos, FIA, Natal e Ano Novo).</p>
 <div class="box"><b>Aprovação do calendário</b><p class="sec-p" style="margin:4px 0 0">Quem aprova: Barros (gestor), Patrícia Galheigo e Agda Ximenes (validadoras). Cada post vai ao ar com o ok dos três.</p><div class="row"><a class="btn b-ok" target="_blank" href="{aprov}">Aprovar calendário completo</a><a class="btn b-adj" target="_blank" href="{ajuste}">Sugerir mudança de data</a></div></div>
 {cal}</section>
 <section id="posts"><h2 class="sec-t">Posts para revisão</h2><p class="sec-p">Arraste as imagens, copie a legenda de cada rede e aprove ou peça ajuste. Post com pendência só vai ao ar depois que ela for resolvida.</p>
@@ -223,7 +223,9 @@ def month_page(mes):
 <div class="toast"></div><script>{JS}</script></body></html>"""
 
 
-DOCS = [("estrategia/01-estrategia.md", "Estratégia, conflitos resolvidos e calendário"),
+DOCS = [("estrategia/07-estrategia-v1.md", "Estratégia V.1 e calendário (atual)"),
+        ("estrategia/06-pesquisa-v1-perfil-e-datas.md", "Pesquisa V.1: auditoria do perfil e datas de dezembro"),
+        ("estrategia/01-estrategia.md", "Estratégia V.0 (histórico)"),
         ("estrategia/02-pesquisa-tendencias.md", "Pesquisa: tendências e oportunidades"),
         ("estrategia/03-sistema-visual.md", "Sistema visual"),
         ("estrategia/04-guia-copy.md", "Guia de copy e revisão no-ai-slop"),
@@ -244,8 +246,8 @@ def hub():
         cards += f'''<a class="tl" href="{mes}/index.html" style="padding:14px"><img src="{mes}/{capa}" style="width:72px;height:90px">
 <div class="inf"><div class="tt" style="font-size:19px">{nome} 2026</div><div class="mt">{e(INTRO[mes])}</div>
 <div style="margin-top:6px"><span class="pill ok">{sum(p["status"]=="pronto" for p in ps)} prontos</span><span class="pill pend">{sum(p["status"]!="pronto" for p in ps)} com pendência</span></div></div></a>'''
-    for nome, txt in [("Janeiro 2027", "Fase 3 · Como ajudar. Pautas definidas na estratégia, arte depois dos primeiros dados do perfil."),
-                      ("Fevereiro 2027", "Fase 4 · Transparência. Pautas definidas na estratégia, arte depois dos primeiros dados do perfil.")]:
+    for nome, txt in [("Janeiro 2027", "Natal e continuidade em 2027. Pautas definidas depois dos primeiros resultados da pesquisa de mapeamento."),
+                      ("Fevereiro 2027", "Transparência e primeiros apoios. Pautas a definir com Barros, Patrícia e Agda.")]:
         cards += f'<div class="tl" style="padding:14px;opacity:.7"><div class="inf"><div class="tt" style="font-size:19px">{nome}</div><div class="mt">{txt}</div></div></div>'
     docs = "".join(f'<a class="tl" href="doc.html?f={f}"><div class="inf"><div class="tt">{e(t)}</div><div class="mt">{f}</div></div></a>' for f, t in DOCS)
     return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
