@@ -39,14 +39,14 @@ POSTS = [
         ],
         "legenda_ig": (
             "Hoje é dia de inaugurar.\n\n"
-            "A Fundação Net do Bem é inaugurada hoje, em Sorocaba. Nosso trabalho é apoiar as casas de acolhimento "
+            "A Fundação Net do Bem é inaugurada hoje, em Sorocaba, num encontro com convidados. Nosso trabalho é apoiar as casas de acolhimento "
             "e as pessoas que cuidam nelas: educadores, equipes técnicas, gestores e voluntários. "
             "A partir de agora, você acompanha esse trabalho por aqui.\n\n"
             "Siga e compartilhe."
         ),
         "legenda_fb": (
             "Hoje é dia de inaugurar.\n\n"
-            "A Fundação Net do Bem é inaugurada hoje, em Sorocaba. Nosso trabalho é apoiar as casas de acolhimento "
+            "A Fundação Net do Bem é inaugurada hoje, em Sorocaba, num encontro com convidados. Nosso trabalho é apoiar as casas de acolhimento "
             "de crianças e adolescentes e as pessoas que cuidam nelas: educadores, equipes técnicas, gestores e voluntários.\n\n"
             "Esta página vai mostrar esse trabalho de perto, sem expor nenhuma criança.\n\n"
             "Siga a página e compartilhe."
